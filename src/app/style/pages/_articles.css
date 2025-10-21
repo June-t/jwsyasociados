@@ -1,0 +1,28 @@
+.news__articles {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 3rem;
+
+  .news__articles--filter {
+    padding-inline: var(--wrapper-space-articles);
+
+    h2 {
+      font-weight: var(--w-regular);
+      font-size: var(--f-large);
+      color: var(--black);
+      line-height: 80%;
+    }
+  }
+
+  .lastest__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: var(--wrapper-space-articles);
+    grid-gap: 20px;
+
+    /* Dispositivos medianos (tablets, entre 769px y 992px) */
+    @media (width <= 992px) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.label {
+  display: flex;
+  grid-gap: 5px;
+
+  .label__category {
+    font-weight: var(--w-medium);
+    font-size: var(--f-smallest);
+    color: var(--primary);
+  }
+
+  .label__divider {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+  }
+
+  .label__time {
+    font-weight: var(--w-regular);
+    font-size: var(--f-smallest);
+    color: var(--primary);
+  }
+}
+
+.seemore {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,119 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: var(--wrapper-space);
+  padding-block: 2rem;
+
+  @media (width <= 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    .header__logo {
+      h1 {
+        width: max-content;
+      }
+    }
+
+    .header__widgets {
+      grid-row: 1;
+      grid-column: 1 / -1;
+      justify-content: space-between;
+
+      .header__widget--separator {
+        display: none;
+      }
+
+      .widget--time {
+        .widget--time--icon {
+          order: 1;
+        }
+
+        .widget--time--content {
+          text-align: end;
+        }
+      }
+    }
+  }
+
+  .header__widget--separator {
+    width: 2px;
+    height: 80%;
+    display: flex;
+    background: #f4f4f4;
+  }
+
+  .header__widgets {
+    display: flex;
+    grid-gap: 2rem;
+    align-items: end;
+
+    @media (width <= 576px) {
+      flex-wrap: wrap;
+    }
+
+    :is(.widget--day, .widget--time) {
+      display: flex;
+      grid-gap: 10px;
+
+      .widget--day--icon,
+      .widget--time--icon {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-content: center;
+        background: var(--primary);
+        border-radius: 5px;
+
+        @media (width <= 768px) {
+          display: none !important;
+        }
+      }
+
+      & .widget--day--content,
+      & .widget--time--content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span:nth-child(1) {
+          font-weight: var(--w-medium);
+          color: var(--black);
+          font-size: var(--f-smallest);
+        }
+
+        span:nth-child(2) {
+          font-weight: var(--w-regular);
+          font-size: var(--f-smallest);
+          color: var(--black);
+        }
+      }
+    }
+
+    .widget--time--content {
+      @media (width <= 576px) {
+        text-align: start !important;
+      }
+    }
+  }
+
+  .header__logo {
+    h1 {
+      font-weight: var(--w-bold);
+      font-size: var(--f-xlarge);
+      color: var(--black);
+      text-transform: uppercase;
+      text-align: center;
+
+      @media (width <= 576px) {
+        font-size: var(--f-large);
+      }
+    }
+  }
+
+  .header__menu {
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
