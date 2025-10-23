@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* SETTINGS */
+@import "./settings/_settings.import.css";
+
+/* TOOLS  */
+@import "./tools/_tools.import.css";
+
+/* GENERIC  */
+@import "./generic/_generic.import.css";
+
+/* ELEMENTS  */
+@import "./elements/_elements.import.css";
+
+/* OBJECTS  */
+@import "./objects/_objects.import.css";
+
+/* COMPONENTS  */
+@import "./components/_components.import.css";
+
+/* PAGES  */
+@import "./pages/_pages.import.css";
+
+/* TRUMPS  */
+@import "./trumps/_trumps.css";
+
+@plugin '../../../hero.ts';
+@source '../../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));

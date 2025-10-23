@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Helvetica";
+  height: auto;
+  color: var(--black);
+}
+.wrapper {
+  height: auto;
+}

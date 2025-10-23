@@ -1,0 +1,29 @@
+:root {
+  /* colors primary */
+  --primary: #123761;
+  /* colors */
+  --white: #fff;
+  --black: #363636;
+  --gray: #8e8e8e;
+  /* space */
+  --wrapper-space: clamp(20px, 5vw, 100px); /* Min: 20px, Max: 200px */
+  --max-width: 135rem;
+  /* weight */
+  --w-light: 300;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+  /* z-index */
+  --top: 999;
+  /* font-size */
+  --junicode: "Junicode VF";
+  --helvetica: "Helvetica";
+  /* Tipografía responsiva (sin breakpoints manuales) */
+  --f-smallest: clamp(12px, 1vw + 14px, 16px); /* Min: 12px, Max: 18px */
+  --f-small: clamp(14px, 1vw + 16px, 20px); /* Min: 14px, Max: 20px */
+  --f-medium: clamp(16px, 1vw + 18px, 24px); /* Min: 16px, Max: 24px */
+  --f-large: clamp(20px, 1.5vw + 20px, 32px); /* Min: 20px, Max: 32px */
+  --f-xlarge: clamp(24px, 2vw + 24px, 40px); /* Min: 24px, Max: 40px */
+  --f-xxlarge: clamp(48px, 3vw + 48px, 62px); /* Min: 48px, Max: 96px */
+}

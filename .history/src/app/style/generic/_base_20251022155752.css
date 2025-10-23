@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  line-height: 30px;
+  letter-spacing: -1px;
+}
+
+html,
+body {
+  height: auto;
+  color: var(--black);
+}
+.wrapper {
+  height: auto;
+}

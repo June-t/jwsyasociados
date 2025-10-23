@@ -1,0 +1,22 @@
+a {
+  background: var(--white);
+  font-family: var(--font-inter);
+  font-weight: var(--w-semibold);
+  font-size: var(--f-medium);
+  color: var(--primary);
+  border-radius: 5rem;
+  width: max-content;
+  padding: 5px 20px 5px 5px;
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+
+  & .btn__icon {
+    background: var(--primary);
+    border-radius: 3rem;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+  }
+}

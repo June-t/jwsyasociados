@@ -1,0 +1,31 @@
+.main__hero {
+  height: 100dvh;
+  padding-inline: var(--wrapper-space);
+  padding-bottom: 10dvh;
+  padding-top: 20dvh;
+  background: var(--black);
+
+  h1 {
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+  }
+
+  span {
+    font-family: var(--font-inter);
+    font-weight: var(--w-medium);
+    font-size: var(--f-large);
+    color: #ffffff;
+  }
+
+  p {
+    font-family: var(--font-inter);
+    font-weight: var(--w-regular);
+    font-size: var(--f-medium);
+    color: var(--white);
+  }
+}

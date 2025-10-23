@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: -1px;
+}
+
+html,
+body {
+  height: auto;
+  color: var(--black);
+}
+.wrapper {
+  height: auto;
+}

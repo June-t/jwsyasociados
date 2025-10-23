@@ -1,0 +1,28 @@
+.header {
+  .header__banner {
+    background: var(--primary);
+    padding-inline: var(--wrapper-space);
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__banner span {
+    font-family: var(--font-inter);
+    font-weight: var(--w-regular);
+    font-size: var(--f-smallest);
+    line-height: 19px;
+    letter-spacing: -0.05em;
+    color: var(--white);
+    display: flex;
+    grid-gap: 10px;
+  }
+  .header__banner span a {
+    font-family: var(--font-inter);
+    font-weight: var(--w-medium);
+    font-size: var(--f-smallest);
+    line-height: 19px;
+    letter-spacing: -0.05em;
+    color: var(--white);
+  }
+}

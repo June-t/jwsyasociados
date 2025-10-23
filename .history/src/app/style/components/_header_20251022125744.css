@@ -1,0 +1,37 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-inline: var(--wrapper-space);
+  padding-block: 2rem;
+
+  @media (width <= 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    .header__logo {
+      h1 {
+        width: max-content;
+      }
+    }
+
+    .header__widgets {
+      grid-row: 1;
+      grid-column: 1 / -1;
+      justify-content: space-between;
+
+      .header__widget--separator {
+        display: none;
+      }
+
+      .widget--time {
+        .widget--time--icon {
+          order: 1;
+        }
+
+        .widget--time--content {
+          text-align: end;
+        }
+      }
+    }
+  }
+}
