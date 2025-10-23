@@ -1,0 +1,11 @@
+.main__about .about__content > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.main__about h2 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(1.2em);
+  will-change: transform, opacity;
+}

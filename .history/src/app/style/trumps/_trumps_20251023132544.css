@@ -1,0 +1,11 @@
+.main__about .about__content > *,
+.main__services .service__item,
+.main__clients .clients__item,
+.main__team .team__item,
+.main__contact .contact__content,
+.main__contact .form__section,
+.main__contact .form__aside {
+  opacity: 1;
+  transform: translateY(50px);
+  will-change: opacity, transform;
+}

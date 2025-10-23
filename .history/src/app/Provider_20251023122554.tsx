@@ -1,0 +1,2 @@
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
