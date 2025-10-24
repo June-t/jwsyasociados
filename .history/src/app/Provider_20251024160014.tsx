@@ -13,6 +13,7 @@ export default function ProviderLenis({
 
     const lenis = new Lenis({
       duration: 1.2,
+      smooth: true,
       lerp: 0.1,
     });
 
