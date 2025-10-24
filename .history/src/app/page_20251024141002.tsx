@@ -17,9 +17,6 @@ const HERO_AUTOPLAY_DELAY = 6000;
 
 export default function Main() {
   const container = useRef<HTMLDivElement | null>(null);
-  const heroImageRef = useRef<HTMLDivElement | null>(null);
-  const heroSliderRef = useRef<HTMLDivElement | null>(null);
-  const heroProgressRef = useRef<HTMLDivElement | null>(null);
   const [content, setContent] = useState<any>(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -39,69 +36,6 @@ export default function Main() {
     );
     return () => clearInterval(id);
   }, [content]);
-
-  useEffect(() => {
-    if (!content?.hero?.length) return;
-
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        defaults: { ease: "cubic-bezier(0.85, 0, 0.15, 1);" },
-      });
-
-      const heroImage = heroImageRef.current?.querySelector("img");
-      if (heroImage) {
-        tl.fromTo(
-          heroImage,
-          { opacity: 0, scale: 1.05 },
-          { opacity: 1, scale: 1, duration: 0.8 },
-          0
-        );
-      }
-
-      if (heroSliderRef.current) {
-        const sliderChildren = Array.from(
-          heroSliderRef.current.children
-        ) as HTMLElement[];
-
-        sliderChildren.forEach((element, index) => {
-          tl.fromTo(
-            element,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.5 },
-            index * 0.1 + 0.1
-          );
-        });
-      }
-
-      if (heroProgressRef.current) {
-        const progressLine = heroProgressRef.current.querySelector(
-          ".progress__line"
-        ) as HTMLElement | null;
-
-        if (progressLine) {
-          tl.fromTo(
-            progressLine,
-            { "--progress-width": "0%" },
-            {
-              "--progress-width": "100%",
-              duration: HERO_AUTOPLAY_DELAY / 1000,
-              ease: "none",
-            },
-            0
-          );
-        }
-
-        tl.fromTo(
-          heroProgressRef.current,
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.4 },
-          0.2
-        );
-      }
-    }, container);
-
-    return () => ctx.revert();
-  }, [activeSlide, content]);
 
   // 🎬 Animaciones GSAP
   useGSAP(
@@ -176,10 +110,10 @@ export default function Main() {
     <div ref={container}>
       {/* 🔹 HERO */}
       <section className='main__hero'>
-        <div className='hero__image' ref={heroImageRef}>
+        <div className='hero__image'>
           <img src={slide.image} alt={slide.tagline} />
         </div>
-        <div className='hero__slider' ref={heroSliderRef}>
+        <div className='hero__slider'>
           <span>{slide.tagline}</span>
           <h1>
             {slideTitleLines.map((line: string, i: number) => (
@@ -189,6 +123,7 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
+          <p>{slide.description}</p>
           <a href='#' className='btn__primary--search'>
             <div className='btn__icon'>
               <IconArrowUpRight />
@@ -196,7 +131,7 @@ export default function Main() {
             {slide.buttonText}
           </a>
         </div>
-        <div className='hero__progress' ref={heroProgressRef}>
+        <div className='hero__progress'>
           <div className='progress__status'>
             <span>{progressCurrent}</span>
           </div>

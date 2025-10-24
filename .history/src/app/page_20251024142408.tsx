@@ -189,6 +189,7 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
+          <p>{slide.description}</p>
           <a href='#' className='btn__primary--search'>
             <div className='btn__icon'>
               <IconArrowUpRight />
@@ -208,7 +209,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 ABOUT */}
-      <section className='main__about'>
+      {/* <section className='main__about'>
         <div className='about__image'></div>
         <div className='about__content'>
           <span>{content.about.tagline}</span>
@@ -243,10 +244,10 @@ export default function Main() {
             {content.about.buttonText}
           </a>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 SERVICES */}
-      <section className='main__services'>
+      {/* <section className='main__services'>
         <div className='services__content'>
           <span>{content.services.tagline}</span>
           <h2>{content.services.title}</h2>
@@ -271,10 +272,10 @@ export default function Main() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 CLIENTS */}
-      <section className='main__clients'>
+      {/* <section className='main__clients'>
         <div className='clients'>
           <span>{content.clients.tagline}</span>
           <h2>{content.clients.title}</h2>
@@ -306,10 +307,10 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 TEAM */}
-      <section className='main__team'>
+      {/* <section className='main__team'>
         <div className='team__content'>
           <span>{content.team.tagline}</span>
           <h2>{content.team.title}</h2>
@@ -329,10 +330,10 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 CONTACT */}
-      <section className='main__contact'>
+      {/* <section className='main__contact'>
         <div className='contact__content'>
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
@@ -383,7 +384,7 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

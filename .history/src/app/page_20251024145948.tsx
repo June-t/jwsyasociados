@@ -274,7 +274,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 CLIENTS */}
-      <section className='main__clients'>
+      {/* <section className='main__clients'>
         <div className='clients'>
           <span>{content.clients.tagline}</span>
           <h2>{content.clients.title}</h2>
@@ -306,10 +306,10 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 TEAM */}
-      <section className='main__team'>
+      {/* <section className='main__team'>
         <div className='team__content'>
           <span>{content.team.tagline}</span>
           <h2>{content.team.title}</h2>
@@ -329,10 +329,10 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 🔹 CONTACT */}
-      <section className='main__contact'>
+      {/* <section className='main__contact'>
         <div className='contact__content'>
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
@@ -383,7 +383,7 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

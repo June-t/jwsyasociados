@@ -4,24 +4,28 @@
       "image": "https://www.betterup.com/hubfs/Happy-work-team-cheering-and-celebrating-at-meeting-team-collaboration.jpg",
       "tagline": "Smarter Strategies Stronger Businesses",
       "title": ["Experience Driven", "Consulting Results", "You Can Count On"],
+      "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver measurable results and long-term impact & hands support.",
       "buttonText": "A Free Consulting"
     },
     {
       "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Smarter Strategies Stronger Businesses",
       "title": ["Transform Vision", "Into Growth", "With Clarity"],
+      "description": "We partner with leaders to sharpen strategy, activate teams, and build momentum that compounds month after month.",
       "buttonText": "Discover More"
     },
     {
       "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Smarter Strategies Stronger Businesses",
-      "title": ["Operational Excellence", "At Every", "Growth Stage"],
+      "title": ["Operational Excellence", "At Every         Growth Stage"],
+      "description": "From process redesign to cultural change, we deliver tailored roadmaps that keep execution smooth and measurable.",
       "buttonText": "See How"
     },
     {
       "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Smarter Strategies Stronger Businesses",
       "title": ["Scale Sustainably", "Lead Confidently", "Win Together"],
+      "description": "Insights, implementation, and iteration all rolled into one partner focused on your long-term resilience.",
       "buttonText": "Work With Us"
     }
   ],

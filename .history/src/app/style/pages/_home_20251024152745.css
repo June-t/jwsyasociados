@@ -746,7 +746,6 @@
         display: flex;
         margin-top: 2rem;
         align-items: flex-end;
-        padding: 0 !important;
 
         .btn__primary--search {
           @media (width <= 1200px) {

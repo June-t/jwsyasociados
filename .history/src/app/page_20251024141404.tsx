@@ -74,23 +74,6 @@ export default function Main() {
       }
 
       if (heroProgressRef.current) {
-        const progressLine = heroProgressRef.current.querySelector(
-          ".progress__line"
-        ) as HTMLElement | null;
-
-        if (progressLine) {
-          tl.fromTo(
-            progressLine,
-            { "--progress-width": "0%" },
-            {
-              "--progress-width": "100%",
-              duration: HERO_AUTOPLAY_DELAY / 1000,
-              ease: "none",
-            },
-            0
-          );
-        }
-
         tl.fromTo(
           heroProgressRef.current,
           { opacity: 0, y: 10 },
@@ -189,6 +172,7 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
+          <p>{slide.description}</p>
           <a href='#' className='btn__primary--search'>
             <div className='btn__icon'>
               <IconArrowUpRight />

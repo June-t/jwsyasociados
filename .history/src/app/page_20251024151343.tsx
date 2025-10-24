@@ -332,7 +332,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 CONTACT */}
-      <section className='main__contact'>
+      {/* <section className='main__contact'>
         <div className='contact__content'>
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
@@ -383,7 +383,7 @@ export default function Main() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

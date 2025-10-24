@@ -16,12 +16,14 @@
       "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Smarter Strategies Stronger Businesses",
       "title": ["Operational Excellence", "At Every", "Growth Stage"],
+      "description": "From process redesign to cultural change, we deliver tailored roadmaps that keep execution smooth and measurable.",
       "buttonText": "See How"
     },
     {
       "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Smarter Strategies Stronger Businesses",
       "title": ["Scale Sustainably", "Lead Confidently", "Win Together"],
+      "description": "Insights, implementation, and iteration all rolled into one partner focused on your long-term resilience.",
       "buttonText": "Work With Us"
     }
   ],
