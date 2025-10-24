@@ -197,8 +197,13 @@ export default function Main() {
           gsap.set(icon, {
             background: `linear-gradient(135deg, ${start}, ${end})`,
             boxShadow: `0 0 15px 2px ${start}40`, // 40 = 25% opacidad
+            borderRadius: "50%",
             width: "50px",
             height: "50px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "0 auto 1rem",
           });
 
           // Añadir animación de aparición suave
@@ -385,6 +390,11 @@ export default function Main() {
                 <span>{t.role}</span>
                 <p>"{t.quote}"</p>
               </div>
+            ))}
+          </div>
+          <div className='clients__brand'>
+            {content.clients.brands.map((b: string, i: number) => (
+              <div className='brand__item' key={i} title={b} />
             ))}
           </div>
           <div className='clients__grid--item'>

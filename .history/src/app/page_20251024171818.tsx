@@ -24,17 +24,6 @@ gsap.registerPlugin(useGSAP);
 
 const HERO_AUTOPLAY_DELAY = 6000;
 
-const gradients = [
-  ["#FF6B6B", "#FFD93D"],
-  ["#6BCB77", "#4D96FF"],
-  ["#845EC2", "#D65DB1"],
-  ["#00C9A7", "#92FE9D"],
-  ["#FF9671", "#FFC75F"],
-  ["#0081CF", "#00C9A7"],
-  ["#F9D923", "#FF6B6B"],
-  ["#845EC2", "#FF9671"],
-];
-
 export default function Main() {
   const container = useRef<HTMLDivElement | null>(null);
   const heroImageRef = useRef<HTMLDivElement | null>(null);
@@ -162,65 +151,21 @@ export default function Main() {
       gsap.utils
         .toArray<HTMLElement>(".btn__primary--search")
         .forEach((btn, i) => {
-          gsap.fromTo(
-            btn,
-            {
-              opacity: 0,
-              y: 30,
-              scale: 0.9,
+          gsap.from(btn, {
+            opacity: 0,
+            y: 25,
+            scale: 0.95,
+            duration: 0.4,
+            ease: "back.out(1.7)",
+            delay: i * 0.1,
+            scrollTrigger: {
+              trigger: btn,
+              start: "top 80%",
+              once: true,
             },
-            {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              duration: 0.1,
-              ease: "back.out(1.7)",
-              delay: i * 0.1,
-              scrollTrigger: {
-                trigger: btn,
-                start: "top 85%",
-                toggleActions: "play none none none",
-                once: true,
-              },
-            }
-          );
-        });
-
-      gsap.utils
-        .toArray<HTMLElement>(".clients__item--icon")
-        .forEach((icon) => {
-          // Elegir un gradiente random
-          const [start, end] =
-            gradients[Math.floor(Math.random() * gradients.length)];
-
-          // Aplicar gradiente y sombra dinámica
-          gsap.set(icon, {
-            background: `linear-gradient(135deg, ${start}, ${end})`,
-            boxShadow: `0 0 15px 2px ${start}40`, // 40 = 25% opacidad
-            width: "50px",
-            height: "50px",
           });
-
-          // Añadir animación de aparición suave
-          gsap.fromTo(
-            icon,
-            { opacity: 0, scale: 0.6, y: 20 },
-            {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "back.out(1.7)",
-              scrollTrigger: {
-                trigger: icon,
-                start: "top 90%",
-                once: true,
-              },
-            }
-          );
         });
     },
-
     { scope: container, dependencies: [content] }
   );
 
@@ -385,6 +330,11 @@ export default function Main() {
                 <span>{t.role}</span>
                 <p>"{t.quote}"</p>
               </div>
+            ))}
+          </div>
+          <div className='clients__brand'>
+            {content.clients.brands.map((b: string, i: number) => (
+              <div className='brand__item' key={i} title={b} />
             ))}
           </div>
           <div className='clients__grid--item'>

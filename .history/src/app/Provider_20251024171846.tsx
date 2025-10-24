@@ -15,7 +15,10 @@ export default function ProviderLenis({
       duration: 1.2,
       lerp: 0.1,
       anchors: {
-        offset: -100,
+        offset: 100,
+        onComplete: () => {
+          console.log("scrolled to anchor");
+        },
       },
     });
 

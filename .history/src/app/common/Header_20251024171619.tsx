@@ -108,25 +108,25 @@ export default function Header() {
         <div className='header__nav'>
           <ul className='header__nav-list'>
             <li>
-              <a href='#inicio'>Inicio</a>
+              <a href='#'>Inicio</a>
             </li>
             <li>
-              <a href='#nosotros'>Nosotros</a>
+              <a href='#'>Nosotros</a>
             </li>
             <li>
-              <a href='#servicios'>Servicios</a>
+              <a href='#'>Servicios</a>
             </li>
             <li>
-              <a href='#testimonios'>Testimonios</a>
+              <a href='#'>Testimonios</a>
             </li>
             <li>
-              <a href='#equipo'>Equipo</a>
+              <a href='#'>Equipo</a>
             </li>
           </ul>
         </div>
 
         <div className='header__menu'>
-          <button className='btn__primary'>Contáctanos</button>
+          <button className='btn__primary'>Contact Us</button>
           <div className='btn__menu' onClick={() => setMenuOpen(true)}>
             <IconMenu2 color='var(--primary)' size={32} />
           </div>
@@ -144,22 +144,25 @@ export default function Header() {
 
         <ul className='mobile-menu__list'>
           <li>
-            <a href='#inicio'>Inicio</a>
+            <a href='#'>Industries</a>
           </li>
           <li>
-            <a href='#nosotros'>Nosotros</a>
+            <a href='#'>Consulting Services</a>
           </li>
           <li>
-            <a href='#servicios'>Servicios</a>
+            <a href='#'>Digital</a>
           </li>
           <li>
-            <a href='#testimonios'>Testimonios</a>
+            <a href='#'>Insights</a>
           </li>
           <li>
-            <a href='#equipo'>Equipo</a>
+            <a href='#'>About</a>
           </li>
           <li>
-            <a href='#contacto'>Contact Us</a>
+            <a href='#'>Careers</a>
+          </li>
+          <li>
+            <a href='#'>Contact Us</a>
           </li>
         </ul>
       </div>

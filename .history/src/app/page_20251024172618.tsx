@@ -387,6 +387,11 @@ export default function Main() {
               </div>
             ))}
           </div>
+          <div className='clients__brand'>
+            {content.clients.brands.map((b: string, i: number) => (
+              <div className='brand__item' key={i} title={b} />
+            ))}
+          </div>
           <div className='clients__grid--item'>
             {remainingTestimonials.map((t: any, i: number) => (
               <div className='clients__item' key={i}>

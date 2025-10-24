@@ -14,9 +14,6 @@ export default function ProviderLenis({
     const lenis = new Lenis({
       duration: 1.2,
       lerp: 0.1,
-      anchors: {
-        offset: -100,
-      },
     });
 
     function raf(time: number) {

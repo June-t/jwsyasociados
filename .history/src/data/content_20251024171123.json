@@ -1,0 +1,197 @@
+{
+  "hero": [
+    {
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Consultoría y Capacitación Empresarial",
+      "title": [
+        "Impulsa el Crecimiento",
+        "Fortalece tu Equipo",
+        "Alcanza Resultados Reales"
+      ],
+      "description": "En JW & Asociados estamos comprometidos con el crecimiento de tu empresa a través de la capacitación continua y la asesoría profesional. ¡Llevamos a tu organización al siguiente nivel!",
+      "buttonText": "Solicitar Asesoría"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Capacitación que Transforma",
+      "title": ["Forma Equipos", "Altamente Competitivos", "y Productivos"],
+      "description": "Nuestra misión es potenciar las competencias de tu equipo mediante programas de capacitación diseñados para impulsar la productividad, la innovación y el liderazgo en todos los niveles.",
+      "buttonText": "Ver Programas"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Desarrollo Empresarial Integral",
+      "title": ["Consultoría Estratégica", "para PYMES y Sector Público"],
+      "description": "Acompañamos a pequeñas y medianas empresas, así como instituciones públicas, en la mejora de sus procesos y el aumento de su eficiencia operativa.",
+      "buttonText": "Contáctanos"
+    }
+  ],
+
+  "about": {
+    "tagline": "Nosotros",
+    "title": "Impulsamos el Desarrollo Empresarial a Través del Conocimiento",
+    "description": [
+      "JW & Asociados es una organización orientada a la prestación de servicios a empresas medianas y pequeñas, así como al sector público, que necesiten mejorar sus procesos y aumentar su productividad mediante consultorías y capacitaciones.",
+      "Con años de experiencia, ayudamos a las empresas a fortalecer sus capacidades, optimizar su desempeño y alcanzar sus metas con estrategias adaptadas a sus necesidades reales."
+    ],
+    "dips": [
+      "Consultoría Estratégica Personalizada",
+      "Capacitación Empresarial Efectiva",
+      "Compromiso con la Excelencia"
+    ],
+    "buttonText": "Conoce Más"
+  },
+
+  "services": {
+    "tagline": "Nuestros Servicios",
+    "title": "Soluciones Integrales para tu Crecimiento Empresarial",
+    "buttonText": "Solicitar Información",
+    "description": "En JW & Asociados ofrecemos una amplia gama de servicios diseñados para fortalecer las capacidades de tu empresa, optimizar procesos y potenciar el talento humano.",
+    "items": [
+      {
+        "title": "Consultoría Empresarial",
+        "description": "Diagnóstico, análisis y diseño de estrategias para optimizar la gestión y los resultados de tu organización.",
+        "icon": "briefcase"
+      },
+      {
+        "title": "Capacitaciones Corporativas",
+        "description": "Programas de formación enfocados en liderazgo, gestión, ventas, servicio al cliente y desarrollo humano.",
+        "icon": "school"
+      },
+      {
+        "title": "Talleres de Productividad",
+        "description": "Entrenamientos prácticos para mejorar la eficiencia, el trabajo en equipo y la organización interna.",
+        "icon": "chart"
+      },
+      {
+        "title": "Desarrollo Organizacional",
+        "description": "Fortalecemos la cultura, estructura y procesos de tu empresa para un crecimiento sostenible.",
+        "icon": "users"
+      },
+      {
+        "title": "Consultoría en Sector Público",
+        "description": "Acompañamos instituciones gubernamentales en la mejora de procesos, gestión y servicio ciudadano.",
+        "icon": "building"
+      },
+      {
+        "title": "Gestión del Talento Humano",
+        "description": "Asesoría y herramientas para identificar, retener y desarrollar el talento clave de tu organización.",
+        "icon": "target"
+      }
+    ]
+  },
+
+  "clients": {
+    "tagline": "Casos de Éxito",
+    "title": "Organizaciones que Han Confiado en Nosotros",
+    "testimonials": [
+      {
+        "name": "María González",
+        "role": "Directora de Recursos Humanos - Grupo Inova",
+        "quote": "Gracias a JW & Asociados logramos estructurar un plan de capacitación que mejoró significativamente la productividad y cohesión de nuestro equipo."
+      },
+      {
+        "name": "Carlos Pérez",
+        "role": "Gerente General - ProTec Industrial",
+        "quote": "Su equipo de consultores comprendió nuestras necesidades y nos ayudó a implementar estrategias que transformaron nuestros procesos internos."
+      },
+      {
+        "name": "Lucía Ramírez",
+        "role": "Encargada de Desarrollo Institucional - Ayuntamiento de Santiago",
+        "quote": "Las capacitaciones brindadas fueron dinámicas, actualizadas y adaptadas a nuestro entorno institucional. Excelente acompañamiento."
+      },
+      {
+        "name": "Juan Castillo",
+        "role": "CEO - Soluciones Empresariales RD",
+        "quote": "Profesionales comprometidos con el crecimiento de las empresas. Cada sesión fue una experiencia de aprendizaje de alto nivel."
+      }
+    ],
+    "brands": [
+      "Grupo Inova",
+      "ProTec Industrial",
+      "Ayuntamiento de Santiago",
+      "Soluciones Empresariales RD",
+      "EducaPlus",
+      "Ministerio de la Juventud",
+      "Smart Consulting"
+    ]
+  },
+
+  "team": {
+    "tagline": "Nuestro Equipo",
+    "title": "Profesionales que Impulsan la Transformación",
+    "members": [
+      {
+        "name": "Juan W. Fernández",
+        "role": "Director General",
+        "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "María López",
+        "role": "Gerente de Capacitación",
+        "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "José Rodríguez",
+        "role": "Consultor en Desarrollo Organizacional",
+        "image": "https://images.unsplash.com/photo-1603415526960-f7e0328d2a02?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "name": "Laura Jiménez",
+        "role": "Coordinadora de Proyectos",
+        "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  },
+
+  "contactHeader": {
+    "tagline": "Contáctanos",
+    "title": "Estamos Aquí para Impulsar el Crecimiento"
+  },
+
+  "contactInfo": {
+    "title": "Contáctanos",
+    "description": "Cuéntanos tus necesidades y diseñaremos una propuesta adaptada.",
+    "aside": [
+      {
+        "title": "Oficina Principal",
+        "href": "https://goo.gl/maps/",
+        "text": "Av. Winston Churchill #45, Santo Domingo, R.D.",
+        "icon": "map"
+      },
+      {
+        "title": "Teléfono y WhatsApp",
+        "href": "tel:+18091234567",
+        "text": "+1 (809) 123-4567",
+        "icon": "phone"
+      },
+      {
+        "title": "Correo Electrónico",
+        "href": "mailto:info@jwconsultores.com",
+        "text": "info@jwconsultores.com",
+        "icon": "mail"
+      }
+    ]
+  },
+
+  "contact": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "placeholder": "Tu Nombre"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "placeholder": "Tu Correo"
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Tu Mensaje"
+      }
+    ],
+    "buttonText": "Enviar Mensaje"
+  }
+}

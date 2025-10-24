@@ -17,7 +17,7 @@ const SITE_DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL("https://jwyasociados.com"),
   title: {
-    default: `${SITE_NAME} | Consulting Services`,
+    default: `${SITE_NAME} | Últimas noticias y análisis`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | Últimas noticias y análisis`,
     description: SITE_DESCRIPTION,
     locale: "es_DO",
-    url: "https://jwyasociados.com",
+    url: "https://lanaciondigital.com.do/",
     images: [
       {
         url: "/og-default.png",

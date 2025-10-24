@@ -7,15 +7,6 @@ import {
   IconArrowUpRight,
   IconCircleCheckFilled,
   IconShieldCheckFilled,
-  IconMapPin,
-  IconDeviceMobileMessage,
-  IconMailFilled,
-  IconBriefcase,
-  IconSchool,
-  IconChartBar,
-  IconUsers,
-  IconBuilding,
-  IconTarget,
 } from "@tabler/icons-react";
 
 // 👇 REGISTRA LOS PLUGINS SOLO UNA VEZ (fuera del componente)
@@ -23,17 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const HERO_AUTOPLAY_DELAY = 6000;
-
-const gradients = [
-  ["#FF6B6B", "#FFD93D"],
-  ["#6BCB77", "#4D96FF"],
-  ["#845EC2", "#D65DB1"],
-  ["#00C9A7", "#92FE9D"],
-  ["#FF9671", "#FFC75F"],
-  ["#0081CF", "#00C9A7"],
-  ["#F9D923", "#FF6B6B"],
-  ["#845EC2", "#FF9671"],
-];
 
 export default function Main() {
   const container = useRef<HTMLDivElement | null>(null);
@@ -162,65 +142,21 @@ export default function Main() {
       gsap.utils
         .toArray<HTMLElement>(".btn__primary--search")
         .forEach((btn, i) => {
-          gsap.fromTo(
-            btn,
-            {
-              opacity: 0,
-              y: 30,
-              scale: 0.9,
+          gsap.from(btn, {
+            opacity: 0,
+            y: 25,
+            scale: 0.95,
+            duration: 0.4,
+            ease: "back.out(1.7)",
+            delay: i * 0.1,
+            scrollTrigger: {
+              trigger: btn,
+              start: "top 80%",
+              once: true,
             },
-            {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              duration: 0.1,
-              ease: "back.out(1.7)",
-              delay: i * 0.1,
-              scrollTrigger: {
-                trigger: btn,
-                start: "top 85%",
-                toggleActions: "play none none none",
-                once: true,
-              },
-            }
-          );
-        });
-
-      gsap.utils
-        .toArray<HTMLElement>(".clients__item--icon")
-        .forEach((icon) => {
-          // Elegir un gradiente random
-          const [start, end] =
-            gradients[Math.floor(Math.random() * gradients.length)];
-
-          // Aplicar gradiente y sombra dinámica
-          gsap.set(icon, {
-            background: `linear-gradient(135deg, ${start}, ${end})`,
-            boxShadow: `0 0 15px 2px ${start}40`, // 40 = 25% opacidad
-            width: "50px",
-            height: "50px",
           });
-
-          // Añadir animación de aparición suave
-          gsap.fromTo(
-            icon,
-            { opacity: 0, scale: 0.6, y: 20 },
-            {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "back.out(1.7)",
-              scrollTrigger: {
-                trigger: icon,
-                start: "top 90%",
-                once: true,
-              },
-            }
-          );
         });
     },
-
     { scope: container, dependencies: [content] }
   );
 
@@ -236,42 +172,10 @@ export default function Main() {
   const firstTestimonials = content.clients.testimonials.slice(0, 4);
   const remainingTestimonials = content.clients.testimonials.slice(4);
 
-  const getIcon = (name: string) => {
-    switch (name) {
-      case "map":
-        return <IconMapPin color='var(--white)' />;
-      case "phone":
-        return <IconDeviceMobileMessage color='var(--white)' />;
-      case "mail":
-        return <IconMailFilled color='var(--white)' />;
-      default:
-        return <IconShieldCheckFilled color='var(--white)' />;
-    }
-  };
-
-  const getServiceIcon = (name: string) => {
-    switch (name) {
-      case "briefcase":
-        return <IconBriefcase color='var(--white)' />;
-      case "school":
-        return <IconSchool color='var(--white)' />;
-      case "chart":
-        return <IconChartBar color='var(--white)' />;
-      case "users":
-        return <IconUsers color='var(--white)' />;
-      case "building":
-        return <IconBuilding color='var(--white)' />;
-      case "target":
-        return <IconTarget color='var(--white)' />;
-      default:
-        return <IconShieldCheckFilled color='var(--white)' />;
-    }
-  };
-
   return (
     <div ref={container}>
       {/* 🔹 HERO */}
-      <section id='inicio' className='main__hero'>
+      <section className='main__hero'>
         <div className='hero__image' ref={heroImageRef}>
           <img src={slide.image} alt={slide.tagline} />
         </div>
@@ -304,7 +208,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 ABOUT */}
-      <section id='nosotros' className='main__about'>
+      <section className='main__about'>
         <div className='about__image'></div>
         <div className='about__content'>
           <span>{content.about.tagline}</span>
@@ -342,7 +246,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 SERVICES */}
-      <section id='servicios' className='main__services'>
+      <section className='main__services'>
         <div className='services__content'>
           <span>{content.services.tagline}</span>
           <h2>{content.services.title}</h2>
@@ -356,12 +260,11 @@ export default function Main() {
             <p>{content.services.description}</p>
           </div>
         </div>
-
         <div className='services__grid'>
           {content.services.items.map((srv: any, i: number) => (
             <div className='service__item' key={i}>
               <div className='services__item--icon'>
-                {getServiceIcon(srv.icon)}
+                <IconShieldCheckFilled />
               </div>
               <h3>{srv.title}</h3>
               <p>{srv.description}</p>
@@ -371,7 +274,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 CLIENTS */}
-      <section id='testimonios' className='main__clients'>
+      <section className='main__clients'>
         <div className='clients'>
           <span>{content.clients.tagline}</span>
           <h2>{content.clients.title}</h2>
@@ -385,6 +288,11 @@ export default function Main() {
                 <span>{t.role}</span>
                 <p>"{t.quote}"</p>
               </div>
+            ))}
+          </div>
+          <div className='clients__brand'>
+            {content.clients.brands.map((b: string, i: number) => (
+              <div className='brand__item' key={i} title={b} />
             ))}
           </div>
           <div className='clients__grid--item'>
@@ -401,7 +309,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 TEAM */}
-      <section id='equipo' className='main__team'>
+      <section className='main__team'>
         <div className='team__content'>
           <span>{content.team.tagline}</span>
           <h2>{content.team.title}</h2>
@@ -424,7 +332,7 @@ export default function Main() {
       </section>
 
       {/* 🔹 CONTACT */}
-      <section id='contacto' className='main__contact'>
+      <section className='main__contact'>
         <div className='contact__content'>
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
@@ -460,8 +368,13 @@ export default function Main() {
           </div>
           <div className='form__aside'>
             {content.contactInfo.aside.map((a: any, i: number) => (
-              <div className='aside__item' key={i}>
-                <div className='aside__item--icon'>{getIcon(a.icon)}</div>
+              <div
+                className={`aside__item${a.highlight ? " bg-amber-600" : ""}`}
+                key={i}
+              >
+                <div className='aside__item--icon'>
+                  <IconShieldCheckFilled color='var(--white)' />
+                </div>
                 <div className='aside__item--info'>
                   <h4>{a.title}</h4>
                   <a href={a.href}>{a.text}</a>

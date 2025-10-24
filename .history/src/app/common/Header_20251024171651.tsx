@@ -126,7 +126,7 @@ export default function Header() {
         </div>
 
         <div className='header__menu'>
-          <button className='btn__primary'>Contáctanos</button>
+          <button className='btn__primary'>Contact Us</button>
           <div className='btn__menu' onClick={() => setMenuOpen(true)}>
             <IconMenu2 color='var(--primary)' size={32} />
           </div>
@@ -159,7 +159,7 @@ export default function Header() {
             <a href='#equipo'>Equipo</a>
           </li>
           <li>
-            <a href='#contacto'>Contact Us</a>
+            <a href='#'>Contact Us</a>
           </li>
         </ul>
       </div>
