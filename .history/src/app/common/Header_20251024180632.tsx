@@ -92,11 +92,11 @@ export default function Header() {
     >
       <div className='header__banner'>
         <span>
-          ¿Está listo para recibir consultoría empresarial gratuita hoy?
-          <a href='#'> Contáctenos</a>
+          Are you Ready to Free Business Consulting Today?
+          <a href='#'> Contact Us</a>
         </span>
         <span>
-          Llámanos ahora: <a>+1 (829) 456-7890</a>
+          Call Us Now: <a>+1 (829) 456-7890</a>
         </span>
       </div>
 
@@ -126,9 +126,7 @@ export default function Header() {
         </div>
 
         <div className='header__menu'>
-          <button id='contacto' className='btn__primary'>
-            Contáctanos
-          </button>
+          <button className='btn__primary'>Contáctanos</button>
           <div className='btn__menu' onClick={() => setMenuOpen(true)}>
             <IconMenu2 color='var(--primary)' size={32} />
           </div>

@@ -96,7 +96,7 @@ export default function Header() {
           <a href='#'> Contáctenos</a>
         </span>
         <span>
-          Llámanos ahora: <a>+1 (829) 456-7890</a>
+          Call Us Now: <a>+1 (829) 456-7890</a>
         </span>
       </div>
 

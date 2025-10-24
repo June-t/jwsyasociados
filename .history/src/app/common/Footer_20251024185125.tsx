@@ -6,8 +6,10 @@ import { useGSAP } from "@gsap/react";
 import Logo from "@/app/assets/logo.png";
 import {
   IconArrowUpRight,
-  IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandMeta,
+  IconBrandX,
+  IconBrandYoutubeFilled,
 } from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -119,9 +121,7 @@ export default function Footer() {
     <footer className='footer' ref={container}>
       <div className='footer__head'>
         <p>
-          Estrategia inteligente con visión humana.
-          <br />
-          Así impulsamos tu crecimiento.
+          Smart Strategy Meets the <br /> Human Insight That's How
         </p>
       </div>
 
@@ -129,21 +129,21 @@ export default function Footer() {
         <div className='main__logo'>
           <img src={Logo.src} alt='JWS Y Asociados Logo' />
           <p>
-            JW & Asociados impulsa el crecimiento empresarial a través de
-            consultorías y capacitaciones estratégicas que transforman equipos y
-            organizaciones.
+            When a buyer is interested in one of your listings, they will
+            contact you through the information you provided when you set up
+            your account.
           </p>
           <div className='main__logo--links'>
-            <a
-              href='https://www.instagram.com/jwyasociadosconsulting/'
-              target='_blank'
-            >
-              <IconBrandInstagram />
+            <a href='#'>
+              <IconBrandMeta />
             </a>
-            <a
-              href='https://www.linkedin.com/company/jwy-asociados/'
-              target='_blank'
-            >
+            <a href='#'>
+              <IconBrandYoutubeFilled />
+            </a>
+            <a href='#'>
+              <IconBrandX />
+            </a>
+            <a href='#'>
               <IconBrandLinkedin />
             </a>
           </div>
@@ -152,21 +152,25 @@ export default function Footer() {
         <div className='main__nav'>
           <div className='main__group'>
             <div className='main__nav--item'>
-              <h4>Empresa</h4>
-              <a href='#nosotros'>Nosotros</a>
-              <a href='#servicios'>Servicios</a>
+              <h4>Company</h4>
+              <a href='#'>About Us</a>
+              <a href='#'>Pricing Plan</a>
+              <a href='#'>FAQ</a>
             </div>
             <div className='main__nav--item'>
-              <h4>Navegación</h4>
-              <a href='#inicio'>Inicio</a>
-              <a href='#testimonios'>Testimonios</a>
-              <a href='#equipo'>Equipo</a>
+              <h4>Navegation</h4>
+              <a href='#'>Industries</a>
+              <a href='#'>Consulting Services</a>
+              <a href='#'>Digital</a>
+              <a href='#'>Insights</a>
+              <a href='#'>About</a>
+              <a href='#'>Careers</a>
             </div>
           </div>
 
           <div className='main__group'>
             <div className='main__nav--item'>
-              <h4>Teléfono</h4>
+              <h4>Phone</h4>
               <a href='tel:+18498576054'>+1 (849) 857-6054</a>
             </div>
             <div className='main__nav--item'>
@@ -176,11 +180,11 @@ export default function Footer() {
               </a>
             </div>
             <div className='main__nav--item'>
-              <a href='#contacto' className='btn__primary--search'>
+              <a href='#' className='btn__primary--search'>
                 <div className='btn__icon'>
                   <IconArrowUpRight />
                 </div>
-                Contáctanos
+                A Free Consulting
               </a>
             </div>
           </div>
@@ -188,13 +192,8 @@ export default function Footer() {
       </div>
 
       <div className='footer__down'>
-        <span>© 2025 JW&Asociados — All rights reserved</span>
-        <span>
-          Hecho con ❤️ por{" "}
-          <a href='https://lineglobalmarkcco.com/' target='_blank'>
-            Line Global Markcco
-          </a>
-        </span>
+        <span>© 2025 JW&Asociados Consulting Inc. All rights reserved</span>
+        <span>Privacy Policy</span>
       </div>
     </footer>
   );

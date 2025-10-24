@@ -92,11 +92,11 @@ export default function Header() {
     >
       <div className='header__banner'>
         <span>
-          ¿Está listo para recibir consultoría empresarial gratuita hoy?
-          <a href='#'> Contáctenos</a>
+          Are you Ready to Free Business Consulting Today?
+          <a href='#'> Contact Us</a>
         </span>
         <span>
-          Llámanos ahora: <a>+1 (829) 456-7890</a>
+          Call Us Now: <a>+1 (829) 456-7890</a>
         </span>
       </div>
 

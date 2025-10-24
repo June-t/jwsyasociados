@@ -119,9 +119,7 @@ export default function Footer() {
     <footer className='footer' ref={container}>
       <div className='footer__head'>
         <p>
-          Estrategia inteligente con visión humana.
-          <br />
-          Así impulsamos tu crecimiento.
+          Smart Strategy Meets the <br /> Human Insight That's How
         </p>
       </div>
 
@@ -129,9 +127,9 @@ export default function Footer() {
         <div className='main__logo'>
           <img src={Logo.src} alt='JWS Y Asociados Logo' />
           <p>
-            JW & Asociados impulsa el crecimiento empresarial a través de
-            consultorías y capacitaciones estratégicas que transforman equipos y
-            organizaciones.
+            When a buyer is interested in one of your listings, they will
+            contact you through the information you provided when you set up
+            your account.
           </p>
           <div className='main__logo--links'>
             <a
@@ -152,13 +150,15 @@ export default function Footer() {
         <div className='main__nav'>
           <div className='main__group'>
             <div className='main__nav--item'>
-              <h4>Empresa</h4>
+              <h4>Company</h4>
               <a href='#nosotros'>Nosotros</a>
               <a href='#servicios'>Servicios</a>
             </div>
             <div className='main__nav--item'>
-              <h4>Navegación</h4>
+              <h4>Navegation</h4>
               <a href='#inicio'>Inicio</a>
+              <a href='#nosotros'>Nosotros</a>
+              <a href='#servicios'>Servicios</a>
               <a href='#testimonios'>Testimonios</a>
               <a href='#equipo'>Equipo</a>
             </div>
@@ -176,7 +176,7 @@ export default function Footer() {
               </a>
             </div>
             <div className='main__nav--item'>
-              <a href='#contacto' className='btn__primary--search'>
+              <a href='#contact' className='btn__primary--search'>
                 <div className='btn__icon'>
                   <IconArrowUpRight />
                 </div>

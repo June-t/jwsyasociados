@@ -48,7 +48,7 @@
       font-weight: var(--w-regular);
       font-size: var(--f-smallest);
       color: var(--white);
-      grid-gap: 10px;
+      grid-gap: 5px;
       display: flex;
 
       a {
@@ -112,33 +112,6 @@
       align-items: center;
       grid-gap: 2rem;
     }
-  }
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: var(--white);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.6s ease, box-shadow 0.6s ease,
-    backdrop-filter 0.6s ease;
-  will-change: transform, opacity;
-  transform: translateY(0);
-
-  &.header--transparent {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: none;
-    transition: background 0.6s ease, box-shadow 0.6s ease,
-      backdrop-filter 0.6s ease;
-  }
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
   }
 }
 

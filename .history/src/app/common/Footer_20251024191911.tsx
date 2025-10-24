@@ -176,7 +176,7 @@ export default function Footer() {
               </a>
             </div>
             <div className='main__nav--item'>
-              <a href='#contacto' className='btn__primary--search'>
+              <a href='#contact' className='btn__primary--search'>
                 <div className='btn__icon'>
                   <IconArrowUpRight />
                 </div>

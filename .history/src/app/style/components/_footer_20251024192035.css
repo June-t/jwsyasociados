@@ -165,7 +165,6 @@
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: color-mix(in srgb, var(--white) 50%, transparent);
         transition: all 0.2s ease-in-out;
       }
     }

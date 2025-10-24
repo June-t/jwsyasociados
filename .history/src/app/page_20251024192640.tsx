@@ -17,7 +17,6 @@ import {
   IconBuilding,
   IconTarget,
 } from "@tabler/icons-react";
-import Footer from "./common/Footer";
 
 // 👇 REGISTRA LOS PLUGINS SOLO UNA VEZ (fuera del componente)
 gsap.registerPlugin(ScrollTrigger);
@@ -330,7 +329,7 @@ export default function Main() {
             ))}
           </div>
           <a
-            href='#contacto'
+            href='contacto'
             className='btn__primary--search btn__primary--dark'
           >
             <div className='btn__icon'>
@@ -476,9 +475,6 @@ export default function Main() {
           </div>
         </div>
       </section>
-
-      {/* 🔹 FOOTER */}
-      <Footer />
     </div>
   );
 }

@@ -18,6 +18,7 @@ import {
   IconTarget,
 } from "@tabler/icons-react";
 import Footer from "./common/Footer";
+import Link from "next/link";
 
 // 👇 REGISTRA LOS PLUGINS SOLO UNA VEZ (fuera del componente)
 gsap.registerPlugin(ScrollTrigger);
@@ -282,12 +283,12 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
-          <a href='#contacto' className='btn__primary--search'>
+          <Link href='#contacto' className='btn__primary--search'>
             <div className='btn__icon'>
               <IconArrowUpRight />
             </div>
             {slide.buttonText}
-          </a>
+          </Link>
         </div>
         <div className='hero__progress' ref={heroProgressRef}>
           <div className='progress__status'>

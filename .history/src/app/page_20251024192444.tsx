@@ -17,7 +17,6 @@ import {
   IconBuilding,
   IconTarget,
 } from "@tabler/icons-react";
-import Footer from "./common/Footer";
 
 // 👇 REGISTRA LOS PLUGINS SOLO UNA VEZ (fuera del componente)
 gsap.registerPlugin(ScrollTrigger);
@@ -282,7 +281,7 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
-          <a href='#contacto' className='btn__primary--search'>
+          <a href='#' className='btn__primary--search'>
             <div className='btn__icon'>
               <IconArrowUpRight />
             </div>
@@ -329,10 +328,7 @@ export default function Main() {
               </div>
             ))}
           </div>
-          <a
-            href='#contacto'
-            className='btn__primary--search btn__primary--dark'
-          >
+          <a href='#' className='btn__primary--search btn__primary--dark'>
             <div className='btn__icon'>
               <IconArrowUpRight />
             </div>
@@ -346,10 +342,7 @@ export default function Main() {
         <div className='services__content'>
           <span>{content.services.tagline}</span>
           <h2>{content.services.title}</h2>
-          <a
-            href='#contacto'
-            className='btn__primary--search btn__primary--dark'
-          >
+          <a href='#' className='btn__primary--search btn__primary--dark'>
             <div className='btn__icon'>
               <IconArrowUpRight />
             </div>
@@ -468,7 +461,7 @@ export default function Main() {
                   <div className='aside__item--icon'>{getIcon(a.icon)}</div>
                   <div className='aside__item--info'>
                     <h4>{a.title}</h4>
-                    <a>{a.text}</a>
+                    <span>{a.text}</span>
                   </div>
                 </div>
               </a>
@@ -476,9 +469,6 @@ export default function Main() {
           </div>
         </div>
       </section>
-
-      {/* 🔹 FOOTER */}
-      <Footer />
     </div>
   );
 }
