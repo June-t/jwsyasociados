@@ -74,7 +74,7 @@ export default function Main() {
       <section className='main__hero'>
         <div className='hero__image'>
           <img
-            src='https://www.betterup.com/hubfs/Happy-work-team-cheering-and-celebrating-at-meeting-team-collaboration.jpg'
+            src='https://www.hubspot.com/hs-fs/hubfs/IMG-20241113-WA0002%20(1).jpg?width=859&height=644&name=IMG-20241113-WA0002%20(1).jpg'
             alt=''
           />
         </div>
@@ -105,7 +105,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      {/* <section className='main__about'>
+      <section className='main__about'>
         <div className='about__image'></div>
         <div className='about__content'>
           <span>About Us</span>
@@ -534,7 +534,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

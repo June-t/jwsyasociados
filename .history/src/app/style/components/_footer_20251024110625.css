@@ -12,7 +12,7 @@
     border-bottom: 1px solid #ffffff36;
 
     @media (width <= 768px) {
-      padding-bottom: 3rem;
+      grid-template-columns: 1fr;
     }
 
     p {
@@ -171,10 +171,6 @@
   display: flex;
   grid-gap: 1rem;
   margin-top: 5rem;
-
-  @media (width <= 768px) {
-    margin-top: 2rem;
-  }
 
   a {
     display: flex;

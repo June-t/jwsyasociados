@@ -105,7 +105,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      {/* <section className='main__about'>
+      <section className='main__about'>
         <div className='about__image'></div>
         <div className='about__content'>
           <span>About Us</span>
@@ -534,7 +534,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

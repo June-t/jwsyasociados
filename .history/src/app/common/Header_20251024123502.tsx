@@ -142,7 +142,7 @@ export default function Header() {
           className='mobile-menu__close'
           onClick={() => setMenuOpen(false)}
         >
-          <IconX size={36} color='var(--primary)' />
+          <IconX size={36} color='#222' />
         </button>
 
         <ul className='mobile-menu__list'>

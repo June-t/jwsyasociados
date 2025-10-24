@@ -48,32 +48,24 @@ export default function Header() {
     { scope: container }
   );
 
-  // 🔹 Menú animado con GSAP
+  // 🔹 Mostrar / ocultar menú con animación
   useEffect(() => {
     if (menuOpen) {
       gsap.fromTo(
         menuRef.current,
-        { opacity: 0, y: -20, display: "none" },
+        { y: -20, opacity: 0, display: "none" },
         {
-          opacity: 1,
           y: 0,
-          display: "flex",
+          opacity: 1,
+          display: "block",
           duration: 0.5,
           ease: "power3.out",
         }
       );
-      gsap.from(".mobile-menu__list li", {
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power3.out",
-        delay: 0.2,
-      });
     } else {
       gsap.to(menuRef.current, {
-        opacity: 0,
         y: -20,
+        opacity: 0,
         duration: 0.4,
         ease: "power3.in",
         onComplete: () => {
@@ -107,22 +99,22 @@ export default function Header() {
 
         <div className='header__nav'>
           <ul className='header__nav-list'>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>Industries</a>
             </li>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>Consulting Services</a>
             </li>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>Digital</a>
             </li>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>Insights</a>
             </li>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>About</a>
             </li>
-            <li>
+            <li className='header__nav-item'>
               <a href='#'>Careers</a>
             </li>
           </ul>
@@ -130,21 +122,21 @@ export default function Header() {
 
         <div className='header__menu'>
           <button className='btn__primary'>Contact Us</button>
-          <div className='btn__menu' onClick={() => setMenuOpen(true)}>
-            <IconMenu2 color='var(--primary)' size={32} />
+          <div
+            className='btn__menu'
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            {menuOpen ? (
+              <IconX color='var(--primary)' size={30} />
+            ) : (
+              <IconMenu2 color='var(--primary)' size={30} />
+            )}
           </div>
         </div>
       </div>
 
-      {/* 🔹 Menú fullscreen con X interna */}
+      {/* 🔹 Menú desplegable */}
       <div className='mobile-menu' ref={menuRef}>
-        <button
-          className='mobile-menu__close'
-          onClick={() => setMenuOpen(false)}
-        >
-          <IconX size={36} color='var(--primary)' />
-        </button>
-
         <ul className='mobile-menu__list'>
           <li>
             <a href='#'>Industries</a>
@@ -165,7 +157,7 @@ export default function Header() {
             <a href='#'>Careers</a>
           </li>
           <li>
-            <a href='#'>Contact Us</a>
+            <button className='btn__primary'>Contact Us</button>
           </li>
         </ul>
       </div>

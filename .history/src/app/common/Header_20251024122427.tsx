@@ -48,7 +48,7 @@ export default function Header() {
     { scope: container }
   );
 
-  // 🔹 Menú animado con GSAP
+  // 🔹 Menú animado
   useEffect(() => {
     if (menuOpen) {
       gsap.fromTo(
@@ -130,21 +130,21 @@ export default function Header() {
 
         <div className='header__menu'>
           <button className='btn__primary'>Contact Us</button>
-          <div className='btn__menu' onClick={() => setMenuOpen(true)}>
-            <IconMenu2 color='var(--primary)' size={32} />
+          <div
+            className='btn__menu'
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            {menuOpen ? (
+              <IconX color='var(--primary)' size={32} />
+            ) : (
+              <IconMenu2 color='var(--primary)' size={32} />
+            )}
           </div>
         </div>
       </div>
 
-      {/* 🔹 Menú fullscreen con X interna */}
+      {/* 🔹 Menú fullscreen */}
       <div className='mobile-menu' ref={menuRef}>
-        <button
-          className='mobile-menu__close'
-          onClick={() => setMenuOpen(false)}
-        >
-          <IconX size={36} color='var(--primary)' />
-        </button>
-
         <ul className='mobile-menu__list'>
           <li>
             <a href='#'>Industries</a>
@@ -165,7 +165,7 @@ export default function Header() {
             <a href='#'>Careers</a>
           </li>
           <li>
-            <a href='#'>Contact Us</a>
+            <button className='btn__primary'>Contact Us</button>
           </li>
         </ul>
       </div>

@@ -1,26 +1,20 @@
 .footer {
   background: var(--primary);
   padding-inline: var(--wrapper-space);
-  padding-top: 3rem;
-
-  @media (width <= 768px) {
-    grid-template-columns: 1fr;
-  }
+  padding-top: 10rem;
 
   .footer__head {
     padding-bottom: 5rem;
     border-bottom: 1px solid #ffffff36;
 
-    @media (width <= 768px) {
-      padding-bottom: 3rem;
-    }
-
     p {
       letter-spacing: -0.05em;
       color: var(--white);
-      width: 100%;
-      font-size: var(--f-xlarge);
+      width: 80%;
+      font-family: Inter;
+      font-size: 48px;
       font-weight: 600;
+      line-height: 100%;
     }
   }
 
@@ -171,10 +165,6 @@
   display: flex;
   grid-gap: 1rem;
   margin-top: 5rem;
-
-  @media (width <= 768px) {
-    margin-top: 2rem;
-  }
 
   a {
     display: flex;

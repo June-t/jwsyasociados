@@ -97,11 +97,13 @@
           flex-wrap: wrap;
         }
 
-        a {
-          font-weight: var(--w-regular);
-          font-size: var(--f-small);
-          color: var(--primary);
-          font-family: var(--font-inter);
+        .header__nav-item {
+          a {
+            font-weight: var(--w-regular);
+            font-size: var(--f-small);
+            color: var(--primary);
+            font-family: var(--font-inter);
+          }
         }
       }
     }

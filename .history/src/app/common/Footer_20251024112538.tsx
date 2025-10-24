@@ -119,7 +119,7 @@ export default function Footer() {
 
   return (
     <footer className='footer' ref={container}>
-      {/* <div className='footer__head'>
+      <div className='footer__head'>
         <p>
           Smart Strategy Meets the <br /> Human Insight That's How
         </p>
@@ -192,7 +192,7 @@ export default function Footer() {
       <div className='footer__down'>
         <span>© 2025 JW&Asociados Consulting Inc. All rights reserved</span>
         <span>Privacy Policy</span>
-      </div> */}
+      </div>
     </footer>
   );
 }

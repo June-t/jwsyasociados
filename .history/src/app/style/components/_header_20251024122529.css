@@ -97,11 +97,13 @@
           flex-wrap: wrap;
         }
 
-        a {
-          font-weight: var(--w-regular);
-          font-size: var(--f-small);
-          color: var(--primary);
-          font-family: var(--font-inter);
+        .header__nav-item {
+          a {
+            font-weight: var(--w-regular);
+            font-size: var(--f-small);
+            color: var(--primary);
+            font-family: var(--font-inter);
+          }
         }
       }
     }
@@ -220,85 +222,6 @@
 }
 
 /* 🔹 Menú Fullscreen */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-  transition: background 0.3s ease;
-}
-
-.header--transparent {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
-}
-
-.header__banner {
-  background: var(--primary);
-  color: #fff;
-  font-size: 0.9rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
-}
-
-.header__navegation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 2rem;
-}
-
-.header__logo img {
-  width: 140px;
-  height: auto;
-}
-
-.header__nav-list {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.header__nav-item a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.header__nav-item a:hover {
-  color: var(--primary);
-}
-
-.header__menu {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.btn__primary {
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.3rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.btn__primary:hover {
-  background: #0a6ecb;
-}
-
-.btn__menu {
-  cursor: pointer;
-  display: none;
-}
-
-/* 🔹 Menú fullscreen */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -310,24 +233,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2000; /* 🔺 Por encima del header */
-  overflow: hidden;
-}
-
-/* Botón X dentro del menú */
-.mobile-menu__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 2100;
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu__close:hover {
-  transform: rotate(90deg);
+  z-index: 999;
 }
 
 .mobile-menu__list {
@@ -342,7 +248,7 @@
 }
 
 .mobile-menu__list a {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: #222;
   font-weight: 500;

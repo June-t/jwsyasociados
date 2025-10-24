@@ -73,10 +73,7 @@ export default function Main() {
     <div ref={container}>
       <section className='main__hero'>
         <div className='hero__image'>
-          <img
-            src='https://www.betterup.com/hubfs/Happy-work-team-cheering-and-celebrating-at-meeting-team-collaboration.jpg'
-            alt=''
-          />
+          <img src='#' alt='' />
         </div>
         <div className='hero__slider'>
           <span>Smarter Strategies Stronger Businesses</span>
@@ -105,7 +102,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      {/* <section className='main__about'>
+      <section className='main__about'>
         <div className='about__image'></div>
         <div className='about__content'>
           <span>About Us</span>
@@ -534,7 +531,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

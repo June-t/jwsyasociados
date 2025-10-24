@@ -97,11 +97,13 @@
           flex-wrap: wrap;
         }
 
-        a {
-          font-weight: var(--w-regular);
-          font-size: var(--f-small);
-          color: var(--primary);
-          font-family: var(--font-inter);
+        .header__nav-item {
+          a {
+            font-weight: var(--w-regular);
+            font-size: var(--f-small);
+            color: var(--primary);
+            font-family: var(--font-inter);
+          }
         }
       }
     }
@@ -366,4 +368,13 @@
   .btn__menu {
     display: block;
   }
+}
+
+.mobile-menu__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: var(--wrapper-space);
+  border: 0px;
+  background: #0000;
 }

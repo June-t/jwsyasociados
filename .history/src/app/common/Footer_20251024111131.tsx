@@ -59,20 +59,19 @@ export default function Footer() {
           y: 30,
           opacity: 0,
           scale: 0.85,
-          duration: 0.1,
         },
         {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.2,
+          duration: 0.6,
           ease: "power3.out",
           stagger: {
             amount: 0.4, // distribuye el efecto de forma más uniforme
             from: "start", // comienza desde el primer elemento
           },
         },
-        "-=0.2"
+        "-=0.3"
       );
 
       // === NAV ITEMS ===
@@ -92,7 +91,7 @@ export default function Footer() {
       tl.from(
         ".main__nav--item .btn__primary--search",
         {
-          opacity: 1,
+          opacity: 0,
           y: 20,
           scale: 0.96,
           duration: 0.4,
@@ -119,7 +118,7 @@ export default function Footer() {
 
   return (
     <footer className='footer' ref={container}>
-      {/* <div className='footer__head'>
+      <div className='footer__head'>
         <p>
           Smart Strategy Meets the <br /> Human Insight That's How
         </p>
@@ -192,7 +191,7 @@ export default function Footer() {
       <div className='footer__down'>
         <span>© 2025 JW&Asociados Consulting Inc. All rights reserved</span>
         <span>Privacy Policy</span>
-      </div> */}
+      </div>
     </footer>
   );
 }

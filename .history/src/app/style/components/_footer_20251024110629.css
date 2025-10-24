@@ -172,10 +172,6 @@
   grid-gap: 1rem;
   margin-top: 5rem;
 
-  @media (width <= 768px) {
-    margin-top: 2rem;
-  }
-
   a {
     display: flex;
     flex-direction: row;
