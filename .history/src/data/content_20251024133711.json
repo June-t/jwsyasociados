@@ -1,0 +1,97 @@
+{
+  "hero": [
+    {
+      "image": "https://www.betterup.com/hubfs/Happy-work-team-cheering-and-celebrating-at-meeting-team-collaboration.jpg",
+      "tagline": "Smarter Strategies Stronger Businesses",
+      "title": "Experience Driven Consulting Results You Can Count On",
+      "description": "Whether you're aiming to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver measurable results and long-term impact.",
+      "buttonText": "A Free Consulting"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fm=jpg&q=60&w=2000",
+      "tagline": "People. Strategy. Performance.",
+      "title": "Building the Future of Your Business, Together",
+      "description": "Our consulting team partners with you to craft strategic frameworks that align vision with action — and deliver real growth.",
+      "buttonText": "Work With Us"
+    }
+  ],
+
+  "about": {
+    "title": "About Us",
+    "headline": "Smart Strategy Meets the Human Insight — That's How We Help You Grow",
+    "description": "Our consulting services are designed to deliver measurable results and long-term impact through a balance of strategy, innovation, and human insight.",
+    "bullets": [
+      "Partner First, Consultant Second",
+      "Your Growth is Our Business",
+      "Behind Every Strategy is a Human Touch"
+    ]
+  },
+
+  "services": {
+    "title": "Our Services",
+    "headline": "Transforming Business Through Strategic Excellence",
+    "paragraph": "From business consulting to digital transformation, our services empower organizations to scale efficiently and achieve sustainable success.",
+    "buttonText": "Discover More",
+    "list": [
+      {
+        "icon": "shield",
+        "title": "Business Consulting",
+        "text": "Optimize your business operations with actionable insights and proven strategies."
+      },
+      {
+        "icon": "chart",
+        "title": "Market Research",
+        "text": "Leverage deep market data to make confident, data-driven decisions."
+      },
+      {
+        "icon": "globe",
+        "title": "Digital Solutions",
+        "text": "Modernize your digital infrastructure and customer experiences."
+      }
+    ]
+  },
+
+  "clients": {
+    "title": "Our Portfolio",
+    "headline": "Client Wins & Case Studies",
+    "testimonials": [
+      {
+        "name": "John Smith",
+        "position": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business, leading to significant growth and efficiency."
+      },
+      {
+        "name": "Laura Green",
+        "position": "COO of TechNova",
+        "quote": "Their strategies helped us redefine internal workflows and boost productivity across all departments."
+      }
+    ]
+  },
+
+  "team": {
+    "title": "Meet The Team",
+    "headline": "Our Experts Who Make Things Happen",
+    "members": [
+      {
+        "name": "Emmy Rosum",
+        "position": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fm=jpg&q=60&w=800"
+      },
+      {
+        "name": "David Chen",
+        "position": "Operations Director",
+        "image": "https://images.unsplash.com/photo-1502767089025-6572583495b0?fm=jpg&q=60&w=800"
+      },
+      {
+        "name": "Sarah Johnson",
+        "position": "Marketing Lead",
+        "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?fm=jpg&q=60&w=800"
+      }
+    ]
+  },
+
+  "contact": {
+    "fields": ["Your Name", "Your Email", "Your Message"],
+    "buttonText": "Send Message"
+  }
+}

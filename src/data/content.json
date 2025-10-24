@@ -1,0 +1,263 @@
+{
+  "hero": [
+    {
+      "image": "https://www.betterup.com/hubfs/Happy-work-team-cheering-and-celebrating-at-meeting-team-collaboration.jpg",
+      "tagline": "Smarter Strategies Stronger Businesses",
+      "title": [
+        "Experience Driven",
+        "Consulting Results",
+        "You Can Count On"
+      ],
+      "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver measurable results and long-term impact & hands support.",
+      "buttonText": "A Free Consulting"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Smarter Strategies Stronger Businesses",
+      "title": [
+        "Transform Vision",
+        "Into Growth",
+        "With Clarity"
+      ],
+      "description": "We partner with leaders to sharpen strategy, activate teams, and build momentum that compounds month after month.",
+      "buttonText": "Discover More"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Smarter Strategies Stronger Businesses",
+      "title": [
+        "Operational Excellence",
+        "At Every",
+        "Growth Stage"
+      ],
+      "description": "From process redesign to cultural change, we deliver tailored roadmaps that keep execution smooth and measurable.",
+      "buttonText": "See How"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
+      "tagline": "Smarter Strategies Stronger Businesses",
+      "title": [
+        "Scale Sustainably",
+        "Lead Confidently",
+        "Win Together"
+      ],
+      "description": "Insights, implementation, and iteration all rolled into one partner focused on your long-term resilience.",
+      "buttonText": "Work With Us"
+    }
+  ],
+  "about": {
+    "tagline": "About Us",
+    "title": "Smart Strategy Meets the Human Insight That's How We Help You Grow",
+    "description": [
+      "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver measurable results and long-term impact & hands support.",
+      "Consulting services are built to deliver measurable results and long-term impact & hands support."
+    ],
+    "dips": [
+      "Partner First Consultant Second",
+      "Your Growth is Our Business",
+      "Behind the Strategy"
+    ],
+    "buttonText": "A Free Consulting"
+  },
+  "services": {
+    "tagline": "Our Services",
+    "title": "Smart Strategy Meets the Human Insight That's Ho",
+    "buttonText": "A Free Consulting",
+    "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver.",
+    "items": [
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Whether you're Icmng to streamline operations, scale sustainably, or navigate complex challenges, our consulting services are built to deliver."
+      }
+    ]
+  },
+  "clients": {
+    "tagline": "Our Portfolio",
+    "title": "Client Wins & Case Studies",
+    "testimonials": [
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      },
+      {
+        "name": "John Smith",
+        "role": "Founder of EcoGods",
+        "quote": "The consulting services provided were transformative for our business. Their insights and strategies helped us achieve significant growth and operational efficiency."
+      }
+    ],
+    "brands": [
+      "Brand One",
+      "Brand Two",
+      "Brand Three",
+      "Brand Four",
+      "Brand Five",
+      "Brand Six",
+      "Brand Seven"
+    ]
+  },
+  "team": {
+    "tagline": "Meet The Team",
+    "title": "Our Experts Who Make Things Happen",
+    "members": [
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      },
+      {
+        "name": "Emmy Rosum",
+        "role": "Co-Founder and CEO",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000"
+      }
+    ]
+  },
+  "contactHeader": {
+    "tagline": "Meet The Team",
+    "title": "Our Experts Who Make Things Happen"
+  },
+  "contactInfo": {
+    "title": "Get In Touch",
+    "description": "Our team is always here to help",
+    "aside": [
+      {
+        "title": "Our Location",
+        "href": "#",
+        "text": "1234 Street Name, City, State, 12345",
+        "highlight": false
+      },
+      {
+        "title": "Our Location",
+        "href": "#",
+        "text": "1234 Street Name, City, State, 12345",
+        "highlight": true
+      },
+      {
+        "title": "Our Location",
+        "href": "#",
+        "text": "1234 Street Name, City, State, 12345",
+        "highlight": false
+      }
+    ]
+  },
+  "contact": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "placeholder": "Your Name"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "placeholder": "Your Email"
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Your Message"
+      }
+    ],
+    "buttonText": "Send Message"
+  }
+}
