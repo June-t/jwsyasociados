@@ -43,6 +43,8 @@ export default function Main() {
   const heroProgressRef = useRef<HTMLDivElement | null>(null);
   const [content, setContent] = useState<any>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [sending, setSending] = useState(false);
+  const [sentStatus, setSentStatus] = useState<null | { ok: boolean; message: string }>(null);
 
   // 📦 Cargar JSON dinámico
   useEffect(() => {
@@ -438,31 +440,92 @@ export default function Main() {
           <div className='form__section'>
             <h3>{content.contactInfo.title}</h3>
             <p>{content.contactInfo.description}</p>
-            <form>
-              {content.contact.fields.map((f: any, i: number) =>
-                f.type === "textarea" ? (
-                  <textarea
-                    key={i}
-                    name={f.name}
-                    placeholder={f.placeholder}
-                  ></textarea>
-                ) : (
-                  <input
-                    key={i}
-                    type={f.type}
-                    name={f.name}
-                    placeholder={f.placeholder}
-                  />
-                )
-              )}
+            <form
+  onSubmit={async (e) => {
+    e.preventDefault();
+    setSentStatus(null);
+    setSending(true);
+    try {
+      const form = e.currentTarget as HTMLFormElement;
+      const fd = new FormData(form);
 
-              <button type='submit' className='btn__primary--search'>
-                <div className='btn__icon'>
-                  <IconArrowUpRight />
-                </div>
-                {content.contact.buttonText}
-              </button>
-            </form>
+      const nombre = (fd.get("nombre") || fd.get("name") || "").toString().trim();
+      const correo = (fd.get("correo") || fd.get("email") || "").toString().trim();
+      const servicio = (fd.get("servicio") || fd.get("service") || "No especificado").toString().trim();
+      const mensaje = (fd.get("mensaje") || fd.get("message") || "").toString().trim();
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, correo, servicio, mensaje }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || "No se pudo enviar el mensaje.");
+      }
+      setSentStatus({ ok: true, message: "¡Mensaje enviado con éxito! Te responderemos pronto." });
+      form.reset();
+    } catch (err: any) {
+      setSentStatus({ ok: false, message: err?.message || "Ocurrió un error al enviar." });
+    } finally {
+      setSending(false);
+    }
+  }}
+>
+  {/* Campos de nombre y correo */}
+  {content.contact.fields
+    .filter((f: any) => f.type !== "textarea")
+    .map((f: any, i: number) => (
+      <input
+        key={i}
+        type={f.type}
+        name={f.name}
+        placeholder={f.placeholder}
+      />
+    ))}
+
+  {/* 🔹 Campo adicional para Servicio (antes del mensaje) */}
+  <select name='servicio' defaultValue=''>
+    <option value='' disabled>
+      Selecciona un servicio
+    </option>
+    {content.services.items.map((srv: any, idx: number) => (
+      <option key={idx} value={srv.title}>
+        {srv.title}
+      </option>
+    ))}
+  </select>
+
+  {/* Campo de mensaje */}
+  {content.contact.fields
+    .filter((f: any) => f.type === "textarea")
+    .map((f: any, i: number) => (
+      <textarea
+        key={i}
+        name={f.name}
+        placeholder={f.placeholder}
+      ></textarea>
+    ))}
+
+  {/* Feedback del envío */}
+  {sentStatus && (
+    <div
+      className={`form__feedback ${sentStatus.ok ? "success" : "error"}`}
+      aria-live='polite'
+    >
+      {sentStatus.message}
+    </div>
+  )}
+
+  {/* Botón de envío */}
+  <button type='submit' className='btn__primary--search' disabled={sending}>
+    <div className='btn__icon'>
+      <IconArrowUpRight />
+    </div>
+    {sending ? "Enviando..." : content.contact.buttonText}
+  </button>
+</form>
+
           </div>
           <div className='form__aside'>
             {content.contactInfo.aside.map((a: any, i: number) => (
