@@ -189,30 +189,31 @@
       border-radius: inherit;
       transition: transform 1.2s ease, filter 0.6s ease;
 
+      // Sutil animación al hacer hover
       &:hover {
         transform: scale(1.05);
         filter: brightness(1.05);
       }
 
-      @media (width <= 576px) {
-        height: 20dvh;
+      @media (max-width: 1200px) {
+        height: 50dvh;
       }
 
-      /* Dispositivos pequeños (móviles grandes, entre 577px y 768px) */
-      @media (577px <= width <= 768px) {
-        height: 25dvh;
-      }
-
-      /* Dispositivos medianos (tablets, entre 769px y 992px) */
-      @media (769px <= width <= 992px) {
+      @media (max-width: 992px) {
         height: 40dvh;
       }
 
-      /* Dispositivos grandes (desktops, entre 993px y 1200px) */
-      @media (993px <= width <= 1200px) {
-        height: 50dvh;
+      @media (max-width: 768px) {
+        height: 35dvh;
+      }
+
+      @media (max-width: 480px) {
+        height: 30dvh;
       }
     }
+
+    // Opcional: fondo de seguridad por si la imagen carga lento
+    background: linear-gradient(135deg, #f7f7f7 0%, #eaeaea 100%);
   }
 
   .about__content {

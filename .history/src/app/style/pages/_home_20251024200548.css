@@ -195,7 +195,7 @@
       }
 
       @media (width <= 576px) {
-        height: 20dvh;
+        height: 30dvh;
       }
 
       /* Dispositivos pequeños (móviles grandes, entre 577px y 768px) */

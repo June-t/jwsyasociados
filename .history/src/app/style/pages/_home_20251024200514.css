@@ -200,7 +200,7 @@
 
       /* Dispositivos pequeños (móviles grandes, entre 577px y 768px) */
       @media (577px <= width <= 768px) {
-        height: 25dvh;
+        height: 35dvh;
       }
 
       /* Dispositivos medianos (tablets, entre 769px y 992px) */

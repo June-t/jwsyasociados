@@ -72,9 +72,8 @@
     }
 
     .header__logo {
-      max-width: 350px;
       img {
-        width: 100%;
+        width: 30dvh;
         height: auto;
       }
     }

@@ -72,10 +72,10 @@
     }
 
     .header__logo {
-      max-width: 350px;
+      width: 100%;
       img {
         width: 100%;
-        height: auto;
+        height: 8dvh;
       }
     }
 
@@ -164,6 +164,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem 2rem;
+}
+
+.header__logo img {
+  width: 140px;
+  height: auto;
 }
 
 .header__nav-list {
