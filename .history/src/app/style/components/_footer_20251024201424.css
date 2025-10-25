@@ -137,7 +137,7 @@
       height: 100%;
 
       p {
-        font-weight: var(--w-light);
+        font-weight: var(--w-regular);
         font-size: var(--f-small);
         color: rgba(255, 255, 255, 0.8);
       }

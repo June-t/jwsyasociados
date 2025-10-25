@@ -455,7 +455,15 @@ export default function Main() {
                   />
                 )
               )}
-
+              <label htmlFor='service'>Selecciona el servicio</label>
+              <select name='service' id='service' required>
+                <option value=''>Selecciona una opción</option>
+                {content.services.items.map((srv: any, i: number) => (
+                  <option key={i} value={srv.title}>
+                    {srv.title}
+                  </option>
+                ))}
+              </select>
               <button type='submit' className='btn__primary--search'>
                 <div className='btn__icon'>
                   <IconArrowUpRight />

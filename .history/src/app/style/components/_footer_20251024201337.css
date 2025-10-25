@@ -137,7 +137,7 @@
       height: 100%;
 
       p {
-        font-weight: var(--w-light);
+        font-weight: var(--w-regular);
         font-size: var(--f-small);
         color: rgba(255, 255, 255, 0.8);
       }
@@ -154,6 +154,7 @@
     justify-content: space-between;
     padding-block: 3rem;
     border-top: 1px solid #ffffff36;
+    grid-gap: 1rem;
 
     @media (width <= 768px) {
       flex-wrap: wrap;

@@ -434,10 +434,12 @@ export default function Main() {
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
         </div>
+
         <div className='contact__form'>
           <div className='form__section'>
             <h3>{content.contactInfo.title}</h3>
             <p>{content.contactInfo.description}</p>
+
             <form>
               {content.contact.fields.map((f: any, i: number) =>
                 f.type === "textarea" ? (
@@ -456,6 +458,19 @@ export default function Main() {
                 )
               )}
 
+              {/* 🔹 Campo de selección de servicio */}
+              <label htmlFor='service' className='form__label'>
+                Selecciona el servicio
+              </label>
+              <select name='service' id='service' required>
+                <option value=''>Selecciona una opción</option>
+                {content.services.items.map((srv: any, i: number) => (
+                  <option key={i} value={srv.title}>
+                    {srv.title}
+                  </option>
+                ))}
+              </select>
+
               <button type='submit' className='btn__primary--search'>
                 <div className='btn__icon'>
                   <IconArrowUpRight />
@@ -464,10 +479,11 @@ export default function Main() {
               </button>
             </form>
           </div>
+
           <div className='form__aside'>
             {content.contactInfo.aside.map((a: any, i: number) => (
-              <a href={a.href}>
-                <div className='aside__item' key={i}>
+              <a href={a.href} key={i}>
+                <div className='aside__item'>
                   <div className='aside__item--icon'>{getIcon(a.icon)}</div>
                   <div className='aside__item--info'>
                     <h4>{a.title}</h4>
