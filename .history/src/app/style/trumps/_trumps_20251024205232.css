@@ -39,7 +39,7 @@ section {
 }
 
 .team__item:hover .team__item--image img {
-  transform: scale(1.08);
+  transform: scale(1.02);
 }
 
 .form__feedback.success {
