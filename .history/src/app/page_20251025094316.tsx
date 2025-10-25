@@ -199,34 +199,6 @@ export default function Main() {
     { scope: container, dependencies: [content] }
   );
 
-  // ✨ Botones con aparición fluida y sin delay visual
-  useEffect(() => {
-    // 1️⃣ Oculta todos los botones inmediatamente al montar (sin esperar GSAP)
-    gsap.set(".btn__primary--search", { opacity: 0, y: 20, scale: 0.97 });
-
-    // 2️⃣ Espera al siguiente frame para asegurar que el DOM está listo
-    requestAnimationFrame(() => {
-      gsap.utils
-        .toArray<HTMLElement>(".btn__primary--search")
-        .forEach((btn, i) => {
-          gsap.to(btn, {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.5,
-            ease: "power2.out",
-            delay: i * 0.1,
-            scrollTrigger: {
-              trigger: btn,
-              start: "top 95%",
-              toggleActions: "play none none none",
-              once: true,
-            },
-          });
-        });
-    });
-  }, [content]);
-
   if (!content) return null;
 
   // 🧠 Variables reutilizables
