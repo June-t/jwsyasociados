@@ -3,26 +3,35 @@
     {
       "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Consultoría y Capacitación Empresarial",
-      "title": ["Impulsa tu Empresa", "Desarrolla tu Talento", "Logra Más"],
+      "title": [
+        "Impulsa tu Empresa",
+        "Desarrolla tu Talento",
+        "Logra Más"
+      ],
       "description": "En JW & Asociados fortalecemos el crecimiento de tu empresa con asesoría profesional y programas de capacitación efectivos.",
       "buttonText": "Solicitar Asesoría"
     },
     {
       "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Formación que Transforma",
-      "title": ["Equipos Más Fuertes", "Resultados Mejores"],
+      "title": [
+        "Equipos Más Fuertes",
+        "Resultados Mejores"
+      ],
       "description": "Potenciamos las competencias de tu equipo con programas de capacitación diseñados para impulsar liderazgo, productividad e innovación.",
       "buttonText": "Ver Programas"
     },
     {
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80",
       "tagline": "Desarrollo Empresarial",
-      "title": ["Consultoría Estratégica", "para Crecer con Impacto"],
+      "title": [
+        "Consultoría Estratégica",
+        "para Crecer con Impacto"
+      ],
       "description": "Acompañamos a PYMES e instituciones públicas en la mejora de procesos, liderazgo y gestión organizacional.",
       "buttonText": "Contáctanos"
     }
   ],
-
   "about": {
     "tagline": "Nosotros",
     "title": "Expertos en Desarrollo Empresarial",
@@ -37,7 +46,6 @@
     ],
     "buttonText": "Conoce Más"
   },
-
   "services": {
     "tagline": "Servicios",
     "title": "Soluciones para Crecer Mejor",
@@ -76,7 +84,6 @@
       }
     ]
   },
-
   "clients": {
     "tagline": "Casos de Éxito",
     "title": "Empresas que Crecen con Nosotros",
@@ -168,7 +175,6 @@
     "tagline": "Contáctanos",
     "title": "Conversemos Sobre tu Crecimiento"
   },
-
   "contactInfo": {
     "title": "Contáctanos",
     "description": "Cuéntanos tus necesidades y te ayudaremos a diseñar una solución efectiva.",
@@ -181,18 +187,29 @@
       },
       {
         "title": "Correo Electrónico",
-        "href": "mailto:jywasociadossrl@gmail.com",
-        "text": "jywasociadossrl@gmail.com",
+        "href": "mailto:info@jwyasociados.com",
+        "text": "info@jwyasociados.com",
         "icon": "mail"
       }
     ]
   },
-
   "contact": {
     "fields": [
-      { "name": "name", "type": "text", "placeholder": "Tu Nombre" },
-      { "name": "email", "type": "email", "placeholder": "Tu Correo" },
-      { "name": "message", "type": "textarea", "placeholder": "Tu Mensaje" }
+      {
+        "name": "name",
+        "type": "text",
+        "placeholder": "Tu Nombre"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "placeholder": "Tu Correo"
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "placeholder": "Tu Mensaje"
+      }
     ],
     "buttonText": "Enviar Mensaje"
   }

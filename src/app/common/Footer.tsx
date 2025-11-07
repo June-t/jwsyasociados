@@ -116,8 +116,8 @@ export default function Footer() {
   );
 
   return (
-    <footer className='footer' ref={container}>
-      <div className='footer__head'>
+    <footer className="footer" ref={container}>
+      <div className="footer__head">
         <p>
           Estrategia inteligente con visión humana.
           <br />
@@ -125,59 +125,57 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className='footer__main'>
-        <div className='main__logo'>
-          <img src={Logo.src} alt='JWS Y Asociados Logo' />
+      <div className="footer__main">
+        <div className="main__logo">
+          <img src={Logo.src} alt="JWS Y Asociados Logo" />
           <p>
             JW & Asociados impulsa el crecimiento empresarial a través de
             consultorías y capacitaciones estratégicas que transforman equipos y
             organizaciones.
           </p>
-          <div className='main__logo--links'>
+          <div className="main__logo--links">
             <a
-              href='https://www.instagram.com/jwyasociadosconsulting/'
-              target='_blank'
+              href="https://www.instagram.com/jwyasociadosconsulting/"
+              target="_blank"
             >
               <IconBrandInstagram />
             </a>
             <a
-              href='https://www.linkedin.com/company/jwy-asociados/'
-              target='_blank'
+              href="https://www.linkedin.com/company/jwy-asociados/"
+              target="_blank"
             >
               <IconBrandLinkedin />
             </a>
           </div>
         </div>
 
-        <div className='main__nav'>
-          <div className='main__group'>
-            <div className='main__nav--item'>
+        <div className="main__nav">
+          <div className="main__group">
+            <div className="main__nav--item">
               <h4>Empresa</h4>
-              <a href='#nosotros'>Nosotros</a>
-              <a href='#servicios'>Servicios</a>
+              <a href="#nosotros">Nosotros</a>
+              <a href="#servicios">Servicios</a>
             </div>
-            <div className='main__nav--item'>
+            <div className="main__nav--item">
               <h4>Navegación</h4>
-              <a href='#inicio'>Inicio</a>
-              <a href='#testimonios'>Testimonios</a>
-              <a href='#equipo'>Equipo</a>
+              <a href="#inicio">Inicio</a>
+              <a href="#testimonios">Testimonios</a>
+              <a href="#equipo">Equipo</a>
             </div>
           </div>
 
-          <div className='main__group'>
-            <div className='main__nav--item'>
+          <div className="main__group">
+            <div className="main__nav--item">
               <h4>Teléfono</h4>
-              <a href='tel:+18498576054'>+1 (849) 857-6054</a>
+              <a href="tel:+18498576054">+1 (849) 857-6054</a>
             </div>
-            <div className='main__nav--item'>
+            <div className="main__nav--item">
               <h4>Email</h4>
-              <a href='mailto:jywasociadossrl@gmail.com'>
-                jywasociadossrl@gmail.com
-              </a>
+              <a href="mailto:info@jwyasociados.com">info@jwyasociados.com</a>
             </div>
-            <div className='main__nav--item'>
-              <a href='#contacto' className='btn__primary--search'>
-                <div className='btn__icon'>
+            <div className="main__nav--item">
+              <a href="#contacto" className="btn__primary--search">
+                <div className="btn__icon">
                   <IconArrowUpRight />
                 </div>
                 Contáctanos
@@ -187,11 +185,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='footer__down'>
+      <div className="footer__down">
         <span>© 2025 JW&Asociados — All rights reserved</span>
         <span>
           Hecho con ❤️ por{" "}
-          <a href='https://lineglobalmarkcco.com/' target='_blank'>
+          <a href="https://lineglobalmarkcco.com/" target="_blank">
             Line Global Markcco
           </a>
         </span>
