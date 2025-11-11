@@ -167,7 +167,7 @@ export default function Footer() {
           <div className="main__group">
             <div className="main__nav--item">
               <h4>Teléfono</h4>
-              <a href="tel:+18498576054">+1 (849) 857-6054</a>
+              <a href="tel:+18099657909">+1 (809) 965-7909</a>
             </div>
             <div className="main__nav--item">
               <h4>Email</h4>
