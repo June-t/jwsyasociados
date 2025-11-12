@@ -73,6 +73,10 @@ form {
   font-family: var(--font-inter);
 }
 
+li {
+  list-style: none !important;
+}
+
 /* ===== Campos ===== */
 form input,
 form textarea,

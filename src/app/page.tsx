@@ -252,6 +252,175 @@ export default function Main() {
 
   const firstTestimonials = content.clients.testimonials.slice(0, 4);
   const remainingTestimonials = content.clients.testimonials.slice(4);
+  const trainingCategories = [
+    "Gestión de la Calidad y Mejora Continua",
+    "Gestión de Riesgos, Ética y Cumplimiento",
+    "Gestión Pública y Transparencia",
+    "Planificación y Estrategia Institucional",
+    "Gestión del Talento Humano y Liderazgo",
+    "Desarrollo Organizacional y Productividad",
+    "Seguridad, Salud y Medio Ambiente (SSMA)",
+    "Emprendimiento, Innovación y Negocios",
+    "Competencias Blandas y Habilidades Directivas",
+    "Gestión de Proyectos y Procesos (PMBOK / BPM)",
+  ];
+
+  const trainingPrograms = [
+    {
+      title: "Gestión de la Calidad y Mejora Continua",
+      description:
+        "Fortalece las capacidades técnicas para asegurar la eficiencia, la satisfacción del cliente y la mejora continua.",
+      courses: [
+        "Fundamentos de la Norma ISO 9001:2015",
+        "Auditor Interno ISO 9001",
+        "Gestión de Indicadores de Desempeño (KPI)",
+        "Control de Procesos y Mejora Continua (Kaizen / 5S / Lean)",
+        "Metodología Lean Six Sigma (Nivel Yellow/Green Belt)",
+      ],
+    },
+    {
+      title: "Gestión de Riesgos, Ética y Cumplimiento",
+      description:
+        "Diseñado para fortalecer la cultura ética y la integridad institucional en organizaciones públicas y privadas.",
+      courses: [
+        "Introducción a la Norma ISO 31000",
+        "Implementación del Sistema Antisoborno ISO 37001",
+        "Programa de Cumplimiento ISO 37301",
+        "Ética e Integridad Institucional",
+        "Debida Diligencia y Cultura de Cumplimiento",
+      ],
+    },
+    {
+      title: "Gestión Pública y Transparencia",
+      description:
+        "Fortalece las competencias del personal público conforme a la Ley 340-06 y el Decreto 36-21.",
+      courses: [
+        "Gestión Ética y Transparencia en las Contrataciones Públicas",
+        "Manual de Compras y Procedimientos Administrativos",
+        "Planificación, Monitoreo y Evaluación del Desempeño Institucional (MEPyD)",
+        "Control Interno y Buenas Prácticas de Gobierno",
+        "Normativas de Cumplimiento y Responsabilidad Administrativa",
+      ],
+    },
+    {
+      title: "Planificación y Estrategia Institucional",
+      description:
+        "Fortalece la capacidad técnica para formular, ejecutar y evaluar estrategias organizacionales.",
+      courses: [
+        "Formulación del Plan Estratégico Institucional (PEI)",
+        "Diseño de Planes Operativos Anuales (POA)",
+        "Gestión por Resultados e Indicadores de Desempeño",
+        "Balanced Scorecard (Cuadro de Mando Integral)",
+        "Taller de Planificación Estratégica Participativa",
+      ],
+    },
+    {
+      title: "Gestión del Talento Humano y Liderazgo",
+      description:
+        "Desarrolla competencias directivas y técnicas para una gestión moderna del talento.",
+      courses: [
+        "Gestión por Competencias y Evaluación de Desempeño",
+        "Selección y Evaluación de Talento (Entrevista por Competencias)",
+        "Gestión Estratégica del Talento Humano",
+        "Clima Organizacional y Motivación Laboral",
+        "Liderazgo Situacional y Equipos de Alto Desempeño",
+      ],
+    },
+    {
+      title: "Desarrollo Organizacional y Productividad",
+      description:
+        "Promueve la eficiencia operativa y la alineación del talento con los objetivos institucionales.",
+      courses: [
+        "Gestión del Cambio Organizacional",
+        "Diseño de Procesos y Estructuras Organizativas",
+        "Gestión del Tiempo y Productividad Personal",
+        "Reingeniería de Procesos (BPM)",
+        "Gestión de la Innovación Interna",
+      ],
+    },
+    {
+      title: "Seguridad, Salud y Medio Ambiente (SSMA)",
+      description:
+        "Fomenta la cultura preventiva y el cumplimiento normativo en salud y seguridad ocupacional.",
+      courses: [
+        "Introducción a la Norma ISO 45001:2018",
+        "Gestión de Seguridad e Higiene Industrial",
+        "Prevención de Riesgos Laborales",
+        "Gestión Ambiental ISO 14001:2015",
+        "Gestión Integral de Residuos y Cumplimiento Ambiental",
+      ],
+    },
+    {
+      title: "Emprendimiento, Innovación y Negocios",
+      description:
+        "Dirigido a emprendedores y equipos que buscan desarrollar modelos de negocio sostenibles.",
+      courses: [
+        "Diseño del Modelo de Negocio (Canvas / Lean Startup)",
+        "Elaboración del Plan de Empresa",
+        "Estudio de Mercado y Análisis de Competencia",
+        "Marketing Digital y Posicionamiento de Marca",
+        "Innovación Empresarial y Emprendimiento Sostenible",
+      ],
+    },
+    {
+      title: "Competencias Blandas y Habilidades Directivas",
+      description:
+        "Fortalece las capacidades interpersonales y de comunicación para el éxito profesional.",
+      courses: [
+        "Comunicación Asertiva y Escucha Activa",
+        "Negociación Estratégica (Método Harvard)",
+        "Trabajo en Equipo y Colaboración Efectiva",
+        "Resolución de Conflictos y Gestión Emocional",
+        "Inteligencia Emocional y Liderazgo Personal",
+      ],
+    },
+    {
+      title: "Gestión de Proyectos y Procesos (PMBOK / BPM)",
+      description:
+        "Capacita en metodologías modernas para la planificación, ejecución y control de proyectos.",
+      courses: [
+        "Gestión de Proyectos bajo Enfoque PMBOK (6ª y 7ª edición)",
+        "Elaboración del WBS, Cronograma y Ruta Crítica",
+        "Análisis de Riesgos en Proyectos",
+        "Gestión de Procesos de Negocio (BPM)",
+        "Herramientas Digitales para la Gestión de Proyectos",
+      ],
+    },
+  ];
+
+  const methodologyPoints = [
+    "Diagnóstico de necesidades por sector e institución.",
+    "Material digital y guía del participante.",
+    "Actividades prácticas, simulaciones o casos reales.",
+    "Evaluación de aprendizaje y certificación digital.",
+  ];
+
+  const serviceAnchorMap: Record<string, string[]> = {
+    "Consultoría y Asesoría Institucional": ["consultoria", "institucional"],
+    "Gestión de la Calidad y Mejora Continua": ["calidad"],
+    "Gestión de Riesgos, Ética y Cumplimiento": ["riesgos", "etica"],
+    "Planificación y Desarrollo Organizacional": ["planificacion", "procesos"],
+    "Gestión Pública y Compras Estatales": ["compras", "publica"],
+    "Formación y Capacitación Profesional": ["formacion"],
+    "Headhunting y Talento Humano": ["talento", "reclutamiento"],
+    "Diagnósticos Organizacionales y Clima Laboral": ["clima"],
+    "Actividades de Integración y Team Building": [],
+    "Emprendimiento e Innovación Empresarial": ["emprendimiento", "innovacion"],
+    "Servicios Técnicos Especializados": [],
+  };
+
+  const courseAnchorMap: Record<string, string[]> = {
+    "Gestión del Talento Humano y Liderazgo": ["liderazgo", "evaluacion"],
+    "Desarrollo Organizacional y Productividad": ["productividad"],
+  };
+
+  const slugify = (value: string) =>
+    value
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
   const getIcon = (name: string) => {
     switch (name) {
@@ -391,15 +560,113 @@ export default function Main() {
         </div>
 
         <div className="services__grid">
-          {content.services.items.map((srv: any, i: number) => (
-            <div className="service__item" key={i}>
-              <div className="services__item--icon">
-                {getServiceIcon(srv.icon)}
+          {content.services.items.map((srv: any) => {
+            const anchors = serviceAnchorMap[srv.title] ?? [];
+            return (
+              <div className="service__item" key={srv.title}>
+                {anchors.map((anchor) => (
+                  <span
+                    key={anchor}
+                    id={anchor}
+                    className="anchor-target"
+                    aria-hidden="true"
+                  />
+                ))}
+                <div className="services__item--icon">
+                  {getServiceIcon(srv.icon)}
+                </div>
+                <h3>{srv.title}</h3>
+                <p>{srv.description}</p>
               </div>
-              <h3>{srv.title}</h3>
-              <p>{srv.description}</p>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 🔹 COURSE */}
+      <section id="course" className="main__course">
+        <span
+          id="capacitaciones"
+          className="anchor-target"
+          aria-hidden="true"
+        />
+        <div className="course__intro">
+          <span>Capacitaciones estratégicas</span>
+          <h2>
+            Diseñamos rutas formativas por categorías, programas y metodologías
+            activas.
+          </h2>
+          <p>
+            Nuestros contenidos mezclan teoría, práctica y simulaciones para que
+            cada equipo implemente mejoras reales desde el primer día.
+          </p>
+        </div>
+
+        <div className="course__grid">
+          <article className="course__card course__categories">
+            <header>
+              <p className="course__eyebrow">I. Categorías agregadas</p>
+              <h3>Cobertura integral de formación</h3>
+              <p>
+                Ordenamos las necesidades institucionales en diez pilares para
+                asegurar profundidad técnica y consistencia estratégica.
+              </p>
+            </header>
+            <ul>
+              {trainingCategories.map((category, index) => (
+                <li key={category}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <p>{category}</p>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="course__card course__programs">
+            <header>
+              <p className="course__eyebrow">II. Programas y cursos</p>
+              <h3>Trayectos especializados con foco en resultados</h3>
+              <p>
+                Cada programa incluye descripción, objetivos y un set curado de
+                cursos operativos.
+              </p>
+            </header>
+
+            <div className="course__programs__list">
+              {trainingPrograms.map((program, index) => {
+                const programId = `program-${slugify(program.title)}`;
+                const anchors = courseAnchorMap[program.title] ?? [];
+                return (
+                  <div
+                    className="course__program"
+                    key={program.title}
+                    id={programId}
+                  >
+                    {anchors.map((anchor) => (
+                      <span
+                        key={anchor}
+                        id={anchor}
+                        className="anchor-target"
+                        aria-hidden="true"
+                      />
+                    ))}
+                    <div className="course__program__header">
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <div>
+                        <h4>{program.title}</h4>
+                        <p>{program.description}</p>
+                      </div>
+                    </div>
+                    <ul>
+                      {program.courses.map((course) => (
+                        <li key={course}>{course}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+          </article>
         </div>
       </section>
 
