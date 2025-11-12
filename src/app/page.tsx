@@ -16,6 +16,10 @@ import {
   IconUsers,
   IconBuilding,
   IconTarget,
+  IconRotate360,
+  IconBulb,
+  IconFileCertificate,
+  IconNorthStar,
 } from "@tabler/icons-react";
 import Footer from "./common/Footer";
 
@@ -71,7 +75,7 @@ export default function Main() {
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        defaults: { ease: "cubic-bezier(0.85, 0, 0.15, 1);" },
+        defaults: { ease: "cubic-bezier(0.85, 0, 0.15, 1)" },
       });
 
       const heroImage = heroImageRef.current?.querySelector("img");
@@ -201,31 +205,41 @@ export default function Main() {
 
   // ✨ Botones con aparición fluida y sin delay visual
   useEffect(() => {
-    // 1️⃣ Oculta todos los botones inmediatamente al montar (sin esperar GSAP)
-    gsap.set(".btn__primary--search", { opacity: 0, y: 20, scale: 0.97 });
+    if (!content) return;
 
-    // 2️⃣ Espera al siguiente frame para asegurar que el DOM está listo
-    requestAnimationFrame(() => {
-      gsap.utils
-        .toArray<HTMLElement>(".btn__primary--search")
-        .forEach((btn, i) => {
-          gsap.to(btn, {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.5,
-            ease: "power2.out",
-            delay: i * 0.1,
-            scrollTrigger: {
-              trigger: btn,
-              start: "top 95%",
-              toggleActions: "play none none none",
-              once: true,
-            },
+    let rafId: number | null = null;
+    const ctx = gsap.context(() => {
+      // 1️⃣ Oculta todos los botones inmediatamente al montar (sin esperar GSAP)
+      gsap.set(".btn__primary--search", { opacity: 0, y: 20, scale: 0.97 });
+
+      // 2️⃣ Espera al siguiente frame para asegurar que el DOM está listo
+      rafId = requestAnimationFrame(() => {
+        gsap.utils
+          .toArray<HTMLElement>(".btn__primary--search")
+          .forEach((btn, i) => {
+            gsap.to(btn, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              delay: i * 0.1,
+              scrollTrigger: {
+                trigger: btn,
+                start: "top 95%",
+                toggleActions: "play none none none",
+                once: true,
+              },
+            });
           });
-        });
-    });
-  }, [content]);
+      });
+    }, container);
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      ctx.revert();
+    };
+  }, [content, container]);
 
   if (!content) return null;
 
@@ -242,43 +256,51 @@ export default function Main() {
   const getIcon = (name: string) => {
     switch (name) {
       case "map":
-        return <IconMapPin color='var(--white)' />;
+        return <IconMapPin color="var(--white)" />;
       case "phone":
-        return <IconDeviceMobileMessage color='var(--white)' />;
+        return <IconDeviceMobileMessage color="var(--white)" />;
       case "mail":
-        return <IconMailFilled color='var(--white)' />;
+        return <IconMailFilled color="var(--white)" />;
       default:
-        return <IconShieldCheckFilled color='var(--white)' />;
+        return <IconShieldCheckFilled color="var(--white)" />;
     }
   };
 
   const getServiceIcon = (name: string) => {
     switch (name) {
       case "briefcase":
-        return <IconBriefcase color='var(--white)' />;
+        return <IconBriefcase color="var(--white)" />;
       case "school":
-        return <IconSchool color='var(--white)' />;
+        return <IconSchool color="var(--white)" />;
       case "chart":
-        return <IconChartBar color='var(--white)' />;
+        return <IconChartBar color="var(--white)" />;
       case "users":
-        return <IconUsers color='var(--white)' />;
+        return <IconUsers color="var(--white)" />;
       case "building":
-        return <IconBuilding color='var(--white)' />;
+        return <IconBuilding color="var(--white)" />;
       case "target":
-        return <IconTarget color='var(--white)' />;
+        return <IconTarget color="var(--white)" />;
+      case "IconRotate360":
+        return <IconRotate360 color="var(--white)" />;
+      case "IconBulb":
+        return <IconBulb color="var(--white)" />;
+      case "IconFileCertificate":
+        return <IconFileCertificate color="var(--white)" />;
+      case "IconNorthStar":
+        return <IconNorthStar color="var(--white)" />;
       default:
-        return <IconShieldCheckFilled color='var(--white)' />;
+        return <IconShieldCheckFilled color="var(--white)" />;
     }
   };
 
   return (
     <div ref={container}>
       {/* 🔹 HERO */}
-      <section id='inicio' className='main__hero'>
-        <div className='hero__image' ref={heroImageRef}>
+      <section id="inicio" className="main__hero">
+        <div className="hero__image" ref={heroImageRef}>
           <img src={slide.image} alt={slide.tagline} />
         </div>
-        <div className='hero__slider' ref={heroSliderRef}>
+        <div className="hero__slider" ref={heroSliderRef}>
           <span>{slide.tagline}</span>
           <h1>
             {slideTitleLines.map((line: string, i: number) => (
@@ -288,30 +310,30 @@ export default function Main() {
               </React.Fragment>
             ))}
           </h1>
-          <a href='#contacto' className='btn__primary--search'>
-            <div className='btn__icon'>
+          <a href="#contacto" className="btn__primary--search">
+            <div className="btn__icon">
               <IconArrowUpRight />
             </div>
             {slide.buttonText}
           </a>
         </div>
-        <div className='hero__progress' ref={heroProgressRef}>
-          <div className='progress__status'>
+        <div className="hero__progress" ref={heroProgressRef}>
+          <div className="progress__status">
             <span>{progressCurrent}</span>
           </div>
-          <div className='progress__line' />
-          <div className='progress__total'>
+          <div className="progress__line" />
+          <div className="progress__total">
             <span>/{progressTotal}</span>
           </div>
         </div>
       </section>
 
       {/* 🔹 ABOUT */}
-      <section id='nosotros' className='main__about'>
-        <div className='about__image'>
-          <img src='https://plus.unsplash.com/premium_photo-1684769160713-eb143a5f1b11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687' />
+      <section id="nosotros" className="main__about">
+        <div className="about__image">
+          <img src="./images/intro.jpeg" />
         </div>
-        <div className='about__content'>
+        <div className="about__content">
           <span>{content.about.tagline}</span>
           <h2>{content.about.title}</h2>
           <p>
@@ -327,9 +349,9 @@ export default function Main() {
               </React.Fragment>
             ))}
           </p>
-          <div className='about__content--dips'>
+          <div className="about__content--dips">
             {content.about.dips.map((text: string, i: number) => (
-              <div className='dips__item' key={i}>
+              <div className="dips__item" key={i}>
                 <span>
                   <IconCircleCheckFilled />
                 </span>
@@ -338,10 +360,10 @@ export default function Main() {
             ))}
           </div>
           <a
-            href='#contacto'
-            className='btn__primary--search btn__primary--dark'
+            href="#contacto"
+            className="btn__primary--search btn__primary--dark"
           >
-            <div className='btn__icon'>
+            <div className="btn__icon">
               <IconArrowUpRight />
             </div>
             {content.about.buttonText}
@@ -350,28 +372,28 @@ export default function Main() {
       </section>
 
       {/* 🔹 SERVICES */}
-      <section id='servicios' className='main__services'>
-        <div className='services__content'>
+      <section id="servicios" className="main__services">
+        <div className="services__content">
           <span>{content.services.tagline}</span>
           <h2>{content.services.title}</h2>
           <a
-            href='#contacto'
-            className='btn__primary--search btn__primary--dark'
+            href="#contacto"
+            className="btn__primary--search btn__primary--dark"
           >
-            <div className='btn__icon'>
+            <div className="btn__icon">
               <IconArrowUpRight />
             </div>
             {content.services.buttonText}
           </a>
-          <div className='services__paragraph'>
+          <div className="services__paragraph">
             <p>{content.services.description}</p>
           </div>
         </div>
 
-        <div className='services__grid'>
+        <div className="services__grid">
           {content.services.items.map((srv: any, i: number) => (
-            <div className='service__item' key={i}>
-              <div className='services__item--icon'>
+            <div className="service__item" key={i}>
+              <div className="services__item--icon">
                 {getServiceIcon(srv.icon)}
               </div>
               <h3>{srv.title}</h3>
@@ -382,26 +404,26 @@ export default function Main() {
       </section>
 
       {/* 🔹 CLIENTS */}
-      <section id='testimonios' className='main__clients'>
-        <div className='clients'>
+      <section id="testimonios" className="main__clients">
+        <div className="clients">
           <span>{content.clients.tagline}</span>
           <h2>{content.clients.title}</h2>
         </div>
-        <div className='clients__grid'>
-          <div className='clients__grid--item'>
+        <div className="clients__grid">
+          <div className="clients__grid--item">
             {firstTestimonials.map((t: any, i: number) => (
-              <div className='clients__item' key={i}>
-                <div className='clients__item--icon' />
+              <div className="clients__item" key={i}>
+                <div className="clients__item--icon" />
                 <h4>{t.name}</h4>
                 <span>{t.role}</span>
                 <p>"{t.quote}"</p>
               </div>
             ))}
           </div>
-          <div className='clients__grid--item'>
+          <div className="clients__grid--item">
             {remainingTestimonials.map((t: any, i: number) => (
-              <div className='clients__item' key={i}>
-                <div className='clients__item--icon' />
+              <div className="clients__item" key={i}>
+                <div className="clients__item--icon" />
                 <h4>{t.name}</h4>
                 <span>{t.role}</span>
                 <p>"{t.quote}"</p>
@@ -412,19 +434,19 @@ export default function Main() {
       </section>
 
       {/* 🔹 TEAM */}
-      <section id='equipo' className='main__team'>
-        <div className='team__content'>
+      <section id="equipo" className="main__team">
+        <div className="team__content">
           <span>{content.team.tagline}</span>
           <h2>{content.team.title}</h2>
         </div>
-        <div className='team__grid'>
-          <div className='team__grid--item'>
+        <div className="team__grid">
+          <div className="team__grid--item">
             {content.team.members.map((m: any, i: number) => (
-              <div className='team__item' key={i}>
-                <div className='team__item--image'>
+              <div className="team__item" key={i}>
+                <div className="team__item--image">
                   <img src={m.image} alt={m.name} />
                 </div>
-                <div className='item__content'>
+                <div className="item__content">
                   <h4>{m.name}</h4>
                   <span>{m.role}</span>
                 </div>
@@ -435,13 +457,13 @@ export default function Main() {
       </section>
 
       {/* 🔹 CONTACT */}
-      <section id='contacto' className='main__contact'>
-        <div className='contact__content'>
+      <section id="contacto" className="main__contact">
+        <div className="contact__content">
           <span>{content.contactHeader.tagline}</span>
           <h2>{content.contactHeader.title}</h2>
         </div>
-        <div className='contact__form'>
-          <div className='form__section'>
+        <div className="contact__form">
+          <div className="form__section">
             <h3>{content.contactInfo.title}</h3>
             <p>{content.contactInfo.description}</p>
             <form
@@ -510,8 +532,8 @@ export default function Main() {
                 ))}
 
               {/* 🔹 Campo adicional para Servicio (antes del mensaje) */}
-              <select name='servicio' defaultValue=''>
-                <option value='' disabled>
+              <select name="servicio" defaultValue="">
+                <option value="" disabled>
                   Selecciona un servicio
                 </option>
                 {content.services.items.map((srv: any, idx: number) => (
@@ -538,7 +560,7 @@ export default function Main() {
                   className={`form__feedback ${
                     sentStatus.ok ? "success" : "error"
                   }`}
-                  aria-live='polite'
+                  aria-live="polite"
                 >
                   {sentStatus.message}
                 </div>
@@ -546,23 +568,23 @@ export default function Main() {
 
               {/* Botón de envío */}
               <button
-                type='submit'
-                className='btn__primary--search'
+                type="submit"
+                className="btn__primary--search"
                 disabled={sending}
               >
-                <div className='btn__icon'>
+                <div className="btn__icon">
                   <IconArrowUpRight />
                 </div>
                 {sending ? "Enviando..." : content.contact.buttonText}
               </button>
             </form>
           </div>
-          <div className='form__aside'>
+          <div className="form__aside">
             {content.contactInfo.aside.map((a: any, i: number) => (
-              <a href={a.href}>
-                <div className='aside__item' key={i}>
-                  <div className='aside__item--icon'>{getIcon(a.icon)}</div>
-                  <div className='aside__item--info'>
+              <a href={a.href} key={i}>
+                <div className="aside__item">
+                  <div className="aside__item--icon">{getIcon(a.icon)}</div>
+                  <div className="aside__item--info">
                     <h4>{a.title}</h4>
                     <a>{a.text}</a>
                   </div>

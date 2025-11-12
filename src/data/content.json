@@ -1,7 +1,7 @@
 {
   "hero": [
     {
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+      "image": "./images/slide-02.jpeg",
       "tagline": "Consultoría y Capacitación Empresarial",
       "title": [
         "Impulsa tu Empresa",
@@ -12,7 +12,7 @@
       "buttonText": "Solicitar Asesoría"
     },
     {
-      "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80",
+      "image": "./images/slide-03.jpeg",
       "tagline": "Formación que Transforma",
       "title": [
         "Equipos Más Fuertes",
@@ -22,7 +22,7 @@
       "buttonText": "Ver Programas"
     },
     {
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80",
+      "image": "./images/slide-01.jpeg",
       "tagline": "Desarrollo Empresarial",
       "title": [
         "Consultoría Estratégica",
@@ -51,36 +51,193 @@
     "title": "Soluciones para Crecer Mejor",
     "buttonText": "Solicitar Información",
     "description": "Nuestros servicios fortalecen la gestión, el talento y los resultados de tu empresa o institución.",
+    "categories": [
+      "Consultoría y Asesoría Institucional",
+      "Gestión de la Calidad y Mejora Continua",
+      "Gestión de Riesgos, Ética y Cumplimiento",
+      "Planificación y Desarrollo Organizacional",
+      "Gestión Pública y Compras Estatales",
+      "Formación y Capacitación Profesional",
+      "Headhunting y Talento Humano",
+      "Diagnósticos Organizacionales y Clima Laboral",
+      "Actividades de Integración y Team Building",
+      "Emprendimiento e Innovación Empresarial",
+      "Servicios Técnicos Especializados"
+    ],
     "items": [
       {
-        "title": "Consultoría Empresarial",
-        "description": "Diseñamos estrategias que mejoran la gestión, la productividad y la toma de decisiones.",
+        "title": "Consultoría y Asesoría Institucional",
+        "description": "Procesos de fortalecimiento institucional, gestión del cambio y mejora de la gobernanza. Incluye PEI, normas ISO, reestructuración y políticas internas.",
         "icon": "briefcase"
       },
       {
-        "title": "Capacitaciones Corporativas",
-        "description": "Formación en liderazgo, gestión, ventas y servicio al cliente para todo tu equipo.",
-        "icon": "school"
-      },
-      {
-        "title": "Talleres de Productividad",
-        "description": "Entrenamientos prácticos para mejorar la eficiencia y el trabajo en equipo.",
+        "title": "Gestión de la Calidad y Mejora Continua",
+        "description": "Implementación de sistemas integrados ISO, auditorías, Lean Six Sigma y tableros de control (KPI/BSC).",
         "icon": "chart"
       },
       {
-        "title": "Desarrollo Organizacional",
-        "description": "Fortalecemos la cultura, estructura y procesos de tu empresa para crecer sosteniblemente.",
-        "icon": "users"
+        "title": "Gestión de Riesgos, Ética y Cumplimiento",
+        "description": "Diseño de sistemas antisoborno (ISO 37001), cumplimiento (ISO 37301) y programas de integridad y debida diligencia.",
+        "icon": "shield"
       },
       {
-        "title": "Consultoría Pública",
-        "description": "Apoyamos instituciones en la optimización de procesos y gestión de recursos.",
+        "title": "Planificación y Desarrollo Organizacional",
+        "description": "Diseño de PEI, POA y estructuras organizativas. Facilitación de talleres de planificación y liderazgo.",
+        "icon": "target"
+      },
+      {
+        "title": "Gestión Pública y Compras Estatales",
+        "description": "Asesoría técnica en Ley 340-06, manuales de compras, ética y licitaciones públicas.",
         "icon": "building"
       },
       {
-        "title": "Gestión del Talento",
-        "description": "Identificamos y potenciamos el talento clave de tu organización.",
-        "icon": "target"
+        "title": "Formación y Capacitación Profesional",
+        "description": "Talleres, diplomados y programas en calidad, liderazgo, planificación, cumplimiento y habilidades blandas.",
+        "icon": "school"
+      },
+      {
+        "title": "Headhunting y Talento Humano",
+        "description": "Reclutamiento especializado, evaluación por competencias y planes de carrera.",
+        "icon": "users"
+      },
+      {
+        "title": "Diagnósticos Organizacionales y Clima Laboral",
+        "description": "Diagnóstico 360°, análisis de cultura y encuestas de clima laboral para planes de mejora.",
+        "icon": "IconRotate360"
+      },
+      {
+        "title": "Actividades de Integración y Team Building",
+        "description": "Jornadas vivenciales y programas outdoor de liderazgo, comunicación y cohesión de equipos.",
+        "icon": "IconBulb"
+      },
+      {
+        "title": "Emprendimiento e Innovación Empresarial",
+        "description": "Planes de negocio, incubadoras, asesoría a startups y estrategias de innovación sostenible.",
+        "icon": "IconNorthStar"
+      },
+      {
+        "title": "Servicios Técnicos Especializados",
+        "description": "Consultorías ISO 15189, 17025, 39001, 22301, BPM, sostenibilidad y acreditaciones internacionales.",
+        "icon": "IconFileCertificate"
+      }
+    ]
+  },
+  "training": {
+    "tagline": "Capacitaciones",
+    "title": "Programas Formativos que Impulsan Resultados",
+    "description": "Diseñamos y ejecutamos programas de formación profesional adaptados a las necesidades de empresas públicas y privadas.",
+    "categories": [
+      "Gestión de la Calidad y Mejora Continua",
+      "Gestión de Riesgos, Ética y Cumplimiento",
+      "Gestión Pública y Transparencia",
+      "Planificación y Estrategia Institucional",
+      "Gestión del Talento Humano y Liderazgo",
+      "Desarrollo Organizacional y Productividad",
+      "Seguridad, Salud y Medio Ambiente (SSMA)",
+      "Emprendimiento, Innovación y Negocios",
+      "Competencias Blandas y Habilidades Directivas",
+      "Gestión de Proyectos y Procesos (PMBOK / BPM)"
+    ],
+    "programs": [
+      {
+        "area": "Gestión de la Calidad y Mejora Continua",
+        "courses": [
+          "Fundamentos de la Norma ISO 9001:2015",
+          "Auditor Interno ISO 9001",
+          "Gestión de Indicadores de Desempeño (KPI)",
+          "Control de Procesos y Mejora Continua (Kaizen / 5S / Lean)",
+          "Metodología Lean Six Sigma (Yellow/Green Belt)"
+        ]
+      },
+      {
+        "area": "Gestión de Riesgos, Ética y Cumplimiento",
+        "courses": [
+          "Introducción a la Norma ISO 31000",
+          "Implementación del Sistema Antisoborno ISO 37001",
+          "Programa de Cumplimiento ISO 37301",
+          "Ética e Integridad Institucional",
+          "Debida Diligencia y Cultura de Cumplimiento"
+        ]
+      },
+      {
+        "area": "Gestión Pública y Transparencia",
+        "courses": [
+          "Gestión Ética y Transparencia en Contrataciones Públicas",
+          "Manual de Compras y Procedimientos Administrativos",
+          "Planificación, Monitoreo y Evaluación del Desempeño Institucional",
+          "Control Interno y Buenas Prácticas de Gobierno",
+          "Normativas de Cumplimiento y Responsabilidad Administrativa"
+        ]
+      },
+      {
+        "area": "Planificación y Estrategia Institucional",
+        "courses": [
+          "Formulación del Plan Estratégico Institucional (PEI)",
+          "Diseño de Planes Operativos Anuales (POA)",
+          "Gestión por Resultados e Indicadores de Desempeño",
+          "Balanced Scorecard (Cuadro de Mando Integral)",
+          "Taller de Planificación Estratégica Participativa"
+        ]
+      },
+      {
+        "area": "Gestión del Talento Humano y Liderazgo",
+        "courses": [
+          "Gestión por Competencias y Evaluación de Desempeño",
+          "Selección y Evaluación de Talento",
+          "Gestión Estratégica del Talento Humano",
+          "Clima Organizacional y Motivación Laboral",
+          "Liderazgo Situacional y Equipos de Alto Desempeño"
+        ]
+      },
+      {
+        "area": "Desarrollo Organizacional y Productividad",
+        "courses": [
+          "Gestión del Cambio Organizacional",
+          "Diseño de Procesos y Estructuras Organizativas",
+          "Gestión del Tiempo y Productividad Personal",
+          "Reingeniería de Procesos (BPM)",
+          "Gestión de la Innovación Interna"
+        ]
+      },
+      {
+        "area": "Seguridad, Salud y Medio Ambiente (SSMA)",
+        "courses": [
+          "Introducción a la Norma ISO 45001:2018",
+          "Gestión de Seguridad e Higiene Industrial",
+          "Prevención de Riesgos Laborales",
+          "Gestión Ambiental ISO 14001:2015",
+          "Gestión Integral de Residuos y Cumplimiento Ambiental"
+        ]
+      },
+      {
+        "area": "Emprendimiento, Innovación y Negocios",
+        "courses": [
+          "Diseño del Modelo de Negocio (Canvas / Lean Startup)",
+          "Elaboración del Plan de Empresa",
+          "Estudio de Mercado y Análisis de Competencia",
+          "Marketing Digital y Posicionamiento de Marca",
+          "Innovación Empresarial y Emprendimiento Sostenible"
+        ]
+      },
+      {
+        "area": "Competencias Blandas y Habilidades Directivas",
+        "courses": [
+          "Comunicación Asertiva y Escucha Activa",
+          "Negociación Estratégica (Método Harvard)",
+          "Trabajo en Equipo y Colaboración Efectiva",
+          "Resolución de Conflictos y Gestión Emocional",
+          "Inteligencia Emocional y Liderazgo Personal"
+        ]
+      },
+      {
+        "area": "Gestión de Proyectos y Procesos (PMBOK / BPM)",
+        "courses": [
+          "Gestión de Proyectos bajo Enfoque PMBOK",
+          "Elaboración del WBS, Cronograma y Ruta Crítica",
+          "Análisis de Riesgos en Proyectos",
+          "Gestión de Procesos de Negocio (BPM)",
+          "Herramientas Digitales para la Gestión de Proyectos"
+        ]
       }
     ]
   },
@@ -107,26 +264,6 @@
         "name": "Juan Castillo",
         "role": "CEO - Soluciones Empresariales RD",
         "quote": "Profesionales con visión estratégica. Su asesoría fue clave para optimizar nuestros procesos y fortalecer el equipo directivo."
-      },
-      {
-        "name": "Paola Mendoza",
-        "role": "Gerente de Marca - Café Aurora",
-        "quote": "Nos ayudaron a redefinir la cultura organizacional y fortalecer el liderazgo interno. Hoy trabajamos con más propósito."
-      },
-      {
-        "name": "Ricardo Santos",
-        "role": "Director Comercial - Grupo Novatek",
-        "quote": "Su enfoque personalizado y estratégico marcó la diferencia. Logramos integrar a todos los departamentos bajo un mismo objetivo."
-      },
-      {
-        "name": "Gabriela Fernández",
-        "role": "Encargada de Formación - Ministerio de la Juventud",
-        "quote": "Los programas formativos fueron innovadores, dinámicos y con impacto real en el desarrollo de los participantes."
-      },
-      {
-        "name": "Eduardo Martínez",
-        "role": "Consultor de Operaciones - Smart Consulting",
-        "quote": "Excelente acompañamiento en la implementación de metodologías ágiles. Su conocimiento técnico es de alto nivel."
       }
     ],
     "brands": [
@@ -148,25 +285,25 @@
       {
         "name": "Wiliken Paredes Feliz",
         "role": "Gerente General",
-        "description": "Líder visionario con más de 20 años de experiencia en consultoría estratégica y desarrollo empresarial. Su enfoque combina innovación, liderazgo y resultados sostenibles.",
+        "description": "Más de 20 años de experiencia en consultoría estratégica y desarrollo empresarial. Su liderazgo impulsa resultados sostenibles.",
         "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80"
       },
       {
         "name": "Diosa Adon",
         "role": "Representante Comercial",
-        "description": "Especialista en formación corporativa y gestión del talento humano. Diseña programas que impulsan el liderazgo y la productividad en organizaciones de diversos sectores.",
+        "description": "Especialista en formación corporativa y gestión del talento humano, enfocada en liderazgo y productividad.",
         "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
       },
       {
         "name": "José Luis Almonte D.",
         "role": "Asesor Principal",
-        "description": "Experto en desarrollo institucional y mejora de procesos. Su enfoque está orientado a fortalecer la estructura organizativa y fomentar culturas empresariales efectivas.",
+        "description": "Experto en desarrollo institucional y mejora de procesos. Fortalece estructuras y cultura organizacional.",
         "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=800&q=80"
       },
       {
         "name": "Laura Jiménez",
         "role": "Coordinadora de Proyectos",
-        "description": "Encargada de la planificación y ejecución de proyectos de capacitación y consultoría. Su gestión asegura el cumplimiento de cada meta con calidad y eficiencia.",
+        "description": "Encargada de la planificación y ejecución de proyectos de capacitación y consultoría. Asegura eficiencia y calidad.",
         "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=800&q=80"
       }
     ]
