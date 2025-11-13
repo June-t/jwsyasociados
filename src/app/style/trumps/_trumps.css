@@ -1,7 +1,7 @@
 .main__about .about__content > *,
 .main__services .service__item,
 .main__clients .clients__item,
-.main__team .team__item,
+.main__team .team__slide-media,
 .main__contact .contact__content,
 .main__contact .form__section,
 .main__contact .form__aside {
@@ -22,24 +22,11 @@ section {
   transform: scale(1.05);
 }
 
-.team__item {
-  perspective: 1000px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.team__slide-media {
+  perspective: none;
+  transition: transform 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
-}
-
-.team__item:hover {
-  transform: translateY(-8px) rotateX(4deg) rotateY(-4deg) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.team__item--image img {
-  transition: transform 0.6s ease;
-}
-
-.team__item:hover .team__item--image img {
-  transform: scale(1.08);
 }
 
 .form__feedback.success {
@@ -47,4 +34,14 @@ section {
   color: var(--primary);
   font-weight: var(--w-medium);
   font-size: var(--f-small);
+}
+
+.team__slide-media img {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.team__slide.is-active img,
+.team__slide.is-visible img {
+  opacity: 1;
 }

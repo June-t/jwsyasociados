@@ -20,6 +20,8 @@ import {
   IconBulb,
   IconFileCertificate,
   IconNorthStar,
+  IconArrowLeft,
+  IconArrowRight,
 } from "@tabler/icons-react";
 import Footer from "./common/Footer";
 
@@ -28,6 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const HERO_AUTOPLAY_DELAY = 6000;
+const TEAM_AUTOPLAY_DELAY = 5000;
 
 const gradients = [
   ["#FF6B6B", "#FFD93D"],
@@ -47,6 +50,8 @@ export default function Main() {
   const heroProgressRef = useRef<HTMLDivElement | null>(null);
   const [content, setContent] = useState<any>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [teamActiveSlide, setTeamActiveSlide] = useState(0);
+  const [isDesktopTeamLayout, setIsDesktopTeamLayout] = useState(true);
   const [sending, setSending] = useState(false);
   const [sentStatus, setSentStatus] = useState<null | {
     ok: boolean;
@@ -58,6 +63,21 @@ export default function Main() {
     import("@/data/content.json")
       .then((m) => setContent(m.default))
       .catch((e) => console.error("Error al cargar content.json", e));
+  }, []);
+
+  useEffect(() => {
+    if (!content?.team?.members?.length) return;
+    setTeamActiveSlide(0);
+  }, [content?.team?.members?.length]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handleResize = () => {
+      setIsDesktopTeamLayout(window.innerWidth >= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // ⏱️ Autoplay para hero
@@ -133,6 +153,27 @@ export default function Main() {
     return () => ctx.revert();
   }, [activeSlide, content]);
 
+  useEffect(() => {
+    if (!content?.team?.members?.length) return;
+    const id = setInterval(() => {
+      setTeamActiveSlide((prev) => {
+        const total = content.team.members.length;
+        return (prev + 1) % total;
+      });
+    }, TEAM_AUTOPLAY_DELAY);
+
+    return () => clearInterval(id);
+  }, [content?.team?.members]);
+
+  const getTeamOffset = (index: number) => {
+    if (!content?.team?.members?.length || !isDesktopTeamLayout) return 0;
+    const total = content.team.members.length;
+    let offset = index - teamActiveSlide;
+    if (offset > total / 2) offset -= total;
+    if (offset < -total / 2) offset += total;
+    return offset;
+  };
+
   // 🎬 Animaciones GSAP
   useGSAP(
     () => {
@@ -142,7 +183,7 @@ export default function Main() {
         ".main__about .about__content > *",
         ".main__services .service__item",
         ".main__clients .clients__item",
-        ".main__team .team__item",
+        ".main__team .team__slide-media",
         ".main__contact .contact__content",
         ".main__contact .form__section",
         ".main__contact .form__aside",
@@ -386,13 +427,6 @@ export default function Main() {
         "Herramientas Digitales para la Gestión de Proyectos",
       ],
     },
-  ];
-
-  const methodologyPoints = [
-    "Diagnóstico de necesidades por sector e institución.",
-    "Material digital y guía del participante.",
-    "Actividades prácticas, simulaciones o casos reales.",
-    "Evaluación de aprendizaje y certificación digital.",
   ];
 
   const serviceAnchorMap: Record<string, string[]> = {
@@ -705,19 +739,118 @@ export default function Main() {
         <div className="team__content">
           <span>{content.team.tagline}</span>
           <h2>{content.team.title}</h2>
+          {content.team.description && <p>{content.team.description}</p>}
         </div>
-        <div className="team__grid">
-          <div className="team__grid--item">
-            {content.team.members.map((m: any, i: number) => (
-              <div className="team__item" key={i}>
-                <div className="team__item--image">
-                  <img src={m.image} alt={m.name} />
+
+        <div className="team__slider">
+          <div
+            className={`team__slides ${
+              isDesktopTeamLayout
+                ? "team__slides--desktop"
+                : "team__slides--mobile"
+            }`}
+            style={
+              isDesktopTeamLayout
+                ? undefined
+                : {
+                    transform: `translateX(-${teamActiveSlide * 100}%)`,
+                  }
+            }
+          >
+            {content.team.members.map((m: any, i: number) => {
+              // 🔹 MOBILE
+              if (!isDesktopTeamLayout) {
+                return (
+                  <div
+                    key={i}
+                    className={`team__slide ${
+                      i === teamActiveSlide ? "is-active" : ""
+                    }`}
+                  >
+                    <div className="team__slide-media">
+                      <img
+                        src={m.image}
+                        alt={`Equipo JW & Asociados ${i + 1}`}
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                );
+              }
+
+              // 🔹 DESKTOP
+              const offset = getTeamOffset(i);
+              const isActive = offset === 0;
+              const visibilityThreshold =
+                content.team.members.length > 4 ? 2 : 1;
+              const isVisible = Math.abs(offset) <= visibilityThreshold;
+              const distanceFactor = 35;
+              const translateX = offset * distanceFactor;
+              const scale = isActive ? 1 : 0.85;
+
+              return (
+                <div
+                  key={i}
+                  className={`team__slide team__slide--desktop 
+              ${isVisible ? "is-visible" : ""} 
+              ${isActive ? "is-active" : ""}`}
+                  style={{
+                    transform: `translate(-50%, -50%) translateX(${translateX}%) scale(${scale})`,
+                    opacity: isVisible ? 1 : 0,
+                    zIndex: 10 - Math.abs(offset),
+                  }}
+                >
+                  <div className="team__slide-media">
+                    <img
+                      src={m.image}
+                      alt={`Equipo JW & Asociados ${i + 1}`}
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-                <div className="item__content">
-                  <h4>{m.name}</h4>
-                  <span>{m.role}</span>
-                </div>
-              </div>
+              );
+            })}
+          </div>
+
+          <div className="team__controls">
+            <button
+              type="button"
+              className="team__control team__control--prev"
+              onClick={() =>
+                setTeamActiveSlide((prev) =>
+                  prev === 0 ? content.team.members.length - 1 : prev - 1
+                )
+              }
+              aria-label="Imagen anterior del equipo"
+            >
+              <IconArrowLeft />
+            </button>
+
+            <button
+              type="button"
+              className="team__control team__control--next"
+              onClick={() =>
+                setTeamActiveSlide(
+                  (prev) => (prev + 1) % content.team.members.length
+                )
+              }
+              aria-label="Siguiente imagen del equipo"
+            >
+              <IconArrowRight />
+            </button>
+          </div>
+
+          <div className="team__dots">
+            {content.team.members.map((_: any, index: number) => (
+              <button
+                key={index}
+                type="button"
+                className={`team__dot ${
+                  index === teamActiveSlide ? "team__dot--active" : ""
+                }`}
+                aria-label={`Ir a la imagen ${index + 1}`}
+                onClick={() => setTeamActiveSlide(index)}
+              />
             ))}
           </div>
         </div>

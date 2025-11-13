@@ -283,28 +283,22 @@
     "description": "Detrás de cada proyecto exitoso hay un equipo comprometido. En JW & Asociados contamos con consultores, facilitadores y líderes con amplia experiencia en desarrollo empresarial, gestión organizacional y formación profesional.",
     "members": [
       {
-        "name": "Wiliken Paredes Feliz",
-        "role": "Gerente General",
-        "description": "Más de 20 años de experiencia en consultoría estratégica y desarrollo empresarial. Su liderazgo impulsa resultados sostenibles.",
-        "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80"
+        "image": "./images/slide-01.jpeg"
       },
       {
-        "name": "Diosa Adon",
-        "role": "Representante Comercial",
-        "description": "Especialista en formación corporativa y gestión del talento humano, enfocada en liderazgo y productividad.",
-        "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
+        "image": "./images/slide-02.jpeg"
       },
       {
-        "name": "José Luis Almonte D.",
-        "role": "Asesor Principal",
-        "description": "Experto en desarrollo institucional y mejora de procesos. Fortalece estructuras y cultura organizacional.",
-        "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=800&q=80"
+        "image": "./images/slide-03.jpeg"
       },
       {
-        "name": "Laura Jiménez",
-        "role": "Coordinadora de Proyectos",
-        "description": "Encargada de la planificación y ejecución de proyectos de capacitación y consultoría. Asegura eficiencia y calidad.",
-        "image": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=800&q=80"
+        "image": "./images/slide-04.jpg"
+      },
+      {
+        "image": "./images/slide-05.jpeg"
+      },
+      {
+        "image": "./images/slide-06.jpeg"
       }
     ]
   },

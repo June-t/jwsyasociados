@@ -112,15 +112,16 @@ export default function Header() {
   // 🔹 Cerrar menú mobile al hacer clic en enlaces
   useEffect(() => {
     const links = document.querySelectorAll(".mobile-menu__list a");
-    links.forEach((link) => {
-      link.addEventListener("click", () => setMenuOpen(false));
-    });
+    const handleLinkClick = (_event: Event) => setMenuOpen(false);
+    links.forEach((link) => link.addEventListener("click", handleLinkClick));
     return () => {
       links.forEach((link) =>
-        link.removeEventListener("click", () => setMenuOpen(false))
+        link.removeEventListener("click", handleLinkClick)
       );
     };
   }, []);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -287,11 +288,12 @@ export default function Header() {
       </div>
 
       {/* 🔹 Menú Mobile */}
-      <div className="mobile-menu" ref={menuRef}>
-        <button
-          className="mobile-menu__close"
-          onClick={() => setMenuOpen(false)}
-        >
+      <div
+        className={`mobile-menu ${menuOpen ? "is-open" : ""}`}
+        ref={menuRef}
+        aria-hidden={!menuOpen}
+      >
+        <button className="mobile-menu__close" onClick={closeMenu}>
           <IconX size={36} color="var(--primary)" />
         </button>
         <ul className="mobile-menu__list">
@@ -301,27 +303,8 @@ export default function Header() {
           <li>
             <a href="#nosotros">Nosotros</a>
           </li>
-          <li className="mobile__dropdown">
-            <details>
-              <summary>Servicios</summary>
-              <ul>
-                <li>
-                  <a href="#consultoria">Consultoría Estratégica</a>
-                </li>
-                <li>
-                  <a href="#publica">Gestión Pública</a>
-                </li>
-                <li>
-                  <a href="#talento">Talento Humano</a>
-                </li>
-                <li>
-                  <a href="#formacion">Formación Profesional</a>
-                </li>
-                <li>
-                  <a href="#innovacion">Innovación y Emprendimiento</a>
-                </li>
-              </ul>
-            </details>
+          <li>
+            <a href="#consultoria">Servicios</a>
           </li>
           <li>
             <a href="#testimonios">Testimonios</a>
