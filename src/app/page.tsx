@@ -659,7 +659,7 @@ export default function Main() {
           <article className="course__card course__programs">
             <header>
               <p className="course__eyebrow">II. Programas y cursos</p>
-              <h3>Trayectos especializados con foco en resultados</h3>
+              <h3>Proyectos especializados</h3>
               <p>
                 Cada programa incluye descripción, objetivos y un set curado de
                 cursos operativos.
