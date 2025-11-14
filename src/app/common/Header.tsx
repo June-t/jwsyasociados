@@ -137,7 +137,7 @@ export default function Header() {
           <a href="#contacto">Contáctenos</a>
         </span>
         <span>
-          Llámanos ahora: <a href="tel:+18294567890">+1 (829) 456-7890</a>
+          Llámanos ahora: <a href="tel:+18099657909">+1 (809) 965-7909</a>
         </span>
       </div>
 
